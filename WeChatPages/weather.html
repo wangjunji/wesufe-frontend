@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>上财微助手</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your Keywords">
+	<meta name="author" content="Author Name">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/theme.css">
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="css/weather.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<a class="navbar-brand" href="#"><i class="fa fa-cloud"></i> 天气预报</a>
+	</div>
+	<div class="inner-page weather">
+		<div class="report-container">
+			<div class="today">
+				<canvas id="today" width="100" height="100"></canvas>
+				<div class="temperature">26°</div>
+				<div class="weather-type">多云</div>
+				<div class="wind">东南风，2-4级</div>
+				<div class="divider"></div>
+				<div class="date">9月27日 周六</div>
+				<div class="city">上海 
+					<button id="switch-city" type="button" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i> 切换城市</button>
+					<div class="input-container">
+						<input id="search-box" type="text">
+						<i class="fa fa-search"></i>
+						<div class="triangle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="more">
+				<ul>
+					<li>周日<canvas id="day_1" width="40" height="40"></canvas><span>多云&nbsp;&nbsp;23~29°</span></li>
+					<li>周一<canvas id="day_2" width="40" height="40"></canvas><span>晴&nbsp;&nbsp;24~29°</span></li>
+					<li>周二<canvas id="day_3" width="40" height="40"></canvas><span>雨&nbsp;&nbsp;21~30°</span></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	<div class="fixed-bottom footer">
+		2014 &copy; WeSufe
+	</div>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/skycons.js"></script>
+	<script type="text/javascript">
+		var white_skycons = new Skycons({"color": "#fff"});
+		white_skycons.add("today", Skycons.PARTLY_CLOUDY_DAY);
+		white_skycons.play();
+		var black_skycons = new Skycons({"color": "#444"});
+		black_skycons.add("day_1", Skycons.PARTLY_CLOUDY_NIGHT);
+		black_skycons.add("day_2", Skycons.CLEAR_DAY);
+		black_skycons.add("day_3", Skycons.RAIN);
+		black_skycons.play();
+		$(function(){
+			$('.input-container').hide();
+			$('#switch-city').click(function(){
+				$('.input-container').fadeToggle();
+			});
+		})
+		$(document).click(function(){
+		    $('.input-container').fadeOut();
+		});
+
+		$('.input-container,#switch-city').click(function(oEvent){
+		    //取消冒泡
+		    oEvent = oEvent || window.event;
+		    if(document.all){
+		        oEvent.cancelBubble = true;
+		    }else{
+		        oEvent.stopPropagation();
+		    }
+		});
+	</script>
+</body>
+</html>

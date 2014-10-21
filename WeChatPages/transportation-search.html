@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/transportation.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#"><i class="fa fa-map-marker"></i> 出行查询</a>
+    </div>
+    <div class="inner-page transportation">
+        <div class="container">
+            <div class="row">
+                <div class="board">
+                    <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+                    <div class="board-inner">
+                        <ul class="nav nav-tabs" id="myTab">
+                            <div class="liner"></div>
+                            <li class="active">
+                                <a href="#bus" data-toggle="tab" title="公交">
+                                    <span class="round-tabs one">
+                                        <i class="fa fa-bus"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#route" data-toggle="tab" title="线路">
+                                    <span class="round-tabs two">
+                                        <i class="fa fa-car"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#metro" data-toggle="tab" title="地铁">
+                                    <span class="round-tabs three">
+                                        <i class="png-metro"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#railway" data-toggle="tab" title="火车">
+                                    <span class="round-tabs four">
+                                        <i class="png-train"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#airline" data-toggle="tab" title="机票">
+                                    <span class="round-tabs five">
+                                        <i class="fa fa-plane"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="bus">
+                            <h3 class="head text-center">公交查询
+                            </h3>
+                            <p class="narrow text-center">
+                                提供上海公交的线路查询，首末班车时间查询
+                            </p>
+                            <div class="expandable-search">
+                                <input type="text" class="form-control">
+                                <a href=""><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="route">
+                            <h3 class="head text-center">线路查询</h3>
+                            <p class="narrow text-center">
+                                提供从出发地到目的地的公交换乘线路查询
+                            </p>
+                            <div class="route-search">
+                                <input type="text" class="form-control" placeholder="出发地">
+                                <input type="text" class="form-control" placeholder="目的地">
+                                <a href="" class="btn btn-danger"><i class="fa fa-search"></i> 查询</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="metro">
+                            <h3 class="head text-center">地铁查询</h3>
+                            <p class="narrow text-center">
+                                提供上海轨道交通的线路及首末班车时间查询
+                            </p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <span class="line line-1"></span>
+                                            <a href="#">地铁1号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-2"></span>
+                                            <a href="#">地铁2号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-3"></span>
+                                            <a href="#">地铁3号线</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <span class="line line-4"></span>
+                                            <a href="#">地铁4号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-5"></span>
+                                            <a href="#">地铁5号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-6"></span>
+                                            <a href="#">地铁6号线</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <span class="line line-7"></span>
+                                            <a href="#">地铁7号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-8"></span>
+                                            <a href="#">地铁8号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-9"></span>
+                                            <a href="#">地铁9号线</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <span class="line line-10"></span>
+                                            <a href="#">地铁10号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-11"></span>
+                                            <a href="#">地铁11号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-12"></span>
+                                            <a href="#">地铁12号线</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <span class="line line-13"></span>
+                                            <a href="#">地铁13号线</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <span class="line line-16"></span>
+                                            <a href="#">地铁16号线</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="railway">
+                            <h3 class="head text-center">火车查询</h3>
+                            <p class="narrow text-center">
+                                提供全国火车站到站查询、车次查询、余票查询
+                            </p>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs railway-nav" role="tablist">
+                                <li class="active"><a href="#railway-one" role="tab" data-toggle="tab">站到站查询</a>
+                                </li>
+                                <li><a href="#railway-two" role="tab" data-toggle="tab">车次查询</a>
+                                </li>
+                                <li><a href="#railway-three" role="tab" data-toggle="tab">余票查询</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="railway-one">
+                                    <div class="route-search">
+                                        <input type="text" class="form-control" placeholder="出发站">
+                                        <input type="text" class="form-control" placeholder="终点站">
+                                        <select class="form-control">
+                                            <option value="">全部车型</option>
+                                            <option value="G">G-高速动车</option>
+                                            <option value="K">K-快速</option>
+                                            <option value="T">T-空调特快</option>
+                                            <option value="D">D-动车组</option>
+                                            <option value="Z">Z-直达特快</option>
+                                        </select>
+                                        <a href="" class="btn btn-danger"><i class="fa fa-search"></i> 查询</a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="railway-two">
+                                    <div class="route-search">
+                                        <input type="text" class="form-control" placeholder="车次">
+                                        <a href="" class="btn btn-danger"><i class="fa fa-search"></i> 查询</a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="railway-three">
+                                    <div class="route-search">
+                                        <input type="text" class="form-control" placeholder="出发站">
+                                        <input type="text" class="form-control" placeholder="终点站">
+                                        <div class="input-group date" id="datetimepicker">
+                                            <input type="text" class="form-control" data-date-format="YYYY-MM-DD">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </div>
+                                        <a href="" class="btn btn-danger"><i class="fa fa-search"></i> 查询</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="airline">
+                            <div class="text-center">
+                                <i class="img-intro icon-checkmark-circle"></i>
+                            </div>
+                            <h3 class="head text-center">机票查询
+                                </h3>
+                            <p class="narrow text-center">
+                            <span style="color:#f48260;">♥</span>敬请期待!
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer fixed-bottom">
+        2014 &copy; WeSufe
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/zh-cn.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.expandable-search input').focus(function() {
+            var $this = $(this);
+            setTimeout(function() {
+                $this.siblings('a').fadeIn()
+            }, 500);
+        }).blur(function() {
+            $(this).siblings('a').hide();
+        })
+        var dt=$('#datetimepicker').datetimepicker({
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-arrow-up",
+                down: "fa fa-arrow-down"
+            },
+            language:"zh-cn",
+            pickTime: false
+        });
+        dt.data("DateTimePicker").setMinDate(new Date());
+        dt.data("DateTimePicker").setMaxDate(new Date(new moment().add(7,'days').format('L')));
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+	padding-bottom: 40px;
+	background-image: url("../img/topic-bg.jpg");
+}
+.footer.fixed-bottom{
+	margin: 0px;
+	position: fixed;
+	left:0;
+	bottom:0;
+	z-index: 2;
+}
+.topic .button-bar{
+	margin-top: 10px;
+}
+.topic .button-bar button{
+	position: relative;
+	top:;
+	border-radius: 50% !important;
+	border: solid #fff 5px;
+	color: #fff;
+	box-shadow: 0px 2px 6px #ccc;
+}
+.topic .button-bar button i{
+	margin-top: 0px;
+}
+.topic .button-bar button span{
+	display: block;
+	margin-top:20px;
+	font-size: 30px;
+	font-weight: 800;
+}

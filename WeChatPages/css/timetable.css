@@ -1,0 +1,24 @@
+.week{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 10px;
+	color: #fff;
+}
+.lesson-list li:nth-child(2n+1){
+	background:#fff;
+}
+.lesson-list li:nth-child(2n+2){
+	background:#f6f6f6;
+}
+.lesson-time{
+	font-size: 20px;
+	padding: 10px 0px;
+}
+.lesson-name{
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+.lesson-classroom{
+	padding-bottom: 10px;
+}

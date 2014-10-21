@@ -1,0 +1,109 @@
+.activity ul{
+	list-style: none;
+}
+.activity ul>li{
+	text-align: left;
+	margin: 20px 0px;
+}
+.activity ul>li .activity-container{
+	position: relative;
+	padding: 16px 10px; 
+	background-color: #f9f9f9;
+	border-radius: 6px;
+	box-shadow: #ccc 1px 1px 3px;
+}
+.activity ul>li .week{
+	position: absolute;
+	top:-12px;
+	right:10px;
+}
+.activity ul>li .week span{
+	position: absolute;
+	top:16px;
+	right:10px;
+	color: #fff;
+	font-weight: 700;
+}
+.activity ul>li .toolbar{
+	text-align: right;
+	margin: 10px 0px;
+}
+.activity ul>li .toolbar i{
+	color: #999;
+	margin-left: 4px;
+	cursor: pointer;
+}
+.activity .reply-area .input-group{
+	margin-bottom: 10px
+}
+.activity .reply-area .input-group-addon{
+	cursor: pointer;
+}
+.activity .reply-area ul>li{
+	margin: 2px 0;
+	padding: 2px 0;
+	font-size: 12px;
+}
+.activity .reply-area ul>li:hover{
+	background: #dfdfdf;
+	border-radius: 4px;
+}
+.activity .reply-area .from,.activity .reply-area .to{
+	margin: 0px 4px;
+	color:#0080C0;
+}
+.activity .reply-area .reply-container{
+	position: relative;
+	margin-top: 20px;
+	padding: 10px;
+	background: #eee;
+	border-radius: 4px;
+	opacity: .8;
+}
+.activity .reply-area .reply-container button{
+	margin: 0;
+}
+.activity .reply-area .triangle{
+	position:absolute;
+	top:-16px;
+	left:16px;
+	width:0;
+	height:0;
+	font-size:0;
+	border:solid 8px;
+	border-color: transparent;
+	border-bottom-color: #eee;
+	opacity: .8;
+}
+.activity img{
+	float: left;
+	width: 150px;
+	height: 200px;
+	vertical-align: top;
+}
+.activity .img-desc{
+	margin-left:170px;
+}
+.activity .img-desc h4{
+	text-align: left;
+	font-weight: 700;
+}
+.activity .img-desc p{
+	text-align: left;
+}
+.activity .img-desc i{
+	margin-right: 4px; 
+}
+.activity .label{
+	margin: 0px 4px;
+}
+.footer.fixed-bottom{
+	margin: 0px;
+	position: fixed;
+	left:0;
+	bottom:0;
+	z-index: 2;
+}
+body{
+	padding-bottom: 40px;
+}

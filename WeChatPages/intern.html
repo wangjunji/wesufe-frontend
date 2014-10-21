@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>上财微助手</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your Keywords">
+	<meta name="author" content="Author Name">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/theme.css">
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="css/intern.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<a class="navbar-brand" href="#"><i class="fa fa-bookmark"></i> 热门实习</a>
+	</div>
+	<div class="inner-page intern">
+		<div class="navbar navbar-default">
+			<form class="navbar-form">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="搜索您感兴趣的实习">
+					<a href="javascript:;"><i class="fa fa-search"></i></a>
+				</div>
+			</form>
+		</div>
+		<div class="navbar navbar-default nav-main">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a id="show-filter" href="javascript:;"><i class="fa fa-list-ul"></i> 行业筛选</a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-fire red"></i>今日更新</a>
+				</li>
+				<li>
+					<a id="show-config" href="javascript:;">设置关注</a>
+				</li>
+			</ul>
+		</div>
+		<div id="industry-filter" style="display:none">
+			<ul>
+				<li><a href="javascript:;">财会</a></li>
+				<li><a href="javascript:;">金融</a></li>
+				<li><a href="javascript:;">证券</a></li>
+				<li><a href="javascript:;">银行</a></li>
+				<li><a href="javascript:;">资讯</a></li>
+				<li><a href="javascript:;">互联网</a></li>
+				<li><a href="javascript:;">电商</a></li>
+				<li><a href="javascript:;">IT</a></li>
+				<li><a href="javascript:;">快消</a></li>
+				<li><a href="javascript:;">销售</a></li>
+				<li><a href="javascript:;">奢侈品</a></li>
+				<li><a href="javascript:;">房地产</a></li>
+			</ul>
+		</div>
+		<div id="industry-config" style="display:none">
+			<ul>
+				<li><a href="javascript:;">财会 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">金融 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">证券 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">银行 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">资讯 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">互联网 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">电商 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">IT <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">快消 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">销售 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">奢侈品 <i class="fa fa-check"></i></a></li>
+				<li><a href="javascript:;">房地产 <i class="fa fa-check"></i></a></li>
+				<li class="button-group">
+					<button id="config-save" class="btn btn-sm btn-success" >保存设置</button>
+				</li>
+			</ul>
+		</div>
+		<div class="intern-block">
+			<table id="intern-table" class="table table-hover">
+				<thead>
+					<tr>
+						<th nowrap>公司</th>
+						<th nowrap>所属行业</th>
+						<th nowrap>招聘岗位</th>
+						<th nowrap>招聘人数</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>博朗软件开发（上海）有限公司</td>
+						<td>计算机软件</td>
+						<td>Admin intern/行政部实习生</td>
+						<td>2人</td>
+					</tr>
+					<tr>
+						<td>博朗软件开发（上海）有限公司</td>
+						<td>计算机软件</td>
+						<td>Admin intern/行政部实习生</td>
+						<td>2人</td>
+					</tr>
+					<tr>
+						<td>博朗软件开发（上海）有限公司</td>
+						<td>计算机软件</td>
+						<td>Admin intern/行政部实习生</td>
+						<td>2人</td>
+					</tr>
+					<tr>
+						<td>博朗软件开发（上海）有限公司</td>
+						<td>计算机软件</td>
+						<td>Admin intern/行政部实习生</td>
+						<td>2人</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="modal fade" id="success-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					保存成功
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="footer fixed-bottom">
+		2014 &copy; WeSufe
+	</div>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$('#show-filter').click(function(){
+			if($('#industry-config').css('display')=="none"){
+				$('#industry-filter').slideToggle();
+				$(this).toggleClass('active');
+			}
+			else{
+				$('#industry-filter').slideToggle(function(){
+					$('#show-filter').toggleClass('active');
+					$('#industry-config').slideToggle();
+					$('#show-config').toggleClass('active');
+				});
+			}
+		});
+		$('#show-config').click(function(){
+			if($('#industry-filter').css('display')=="none"){
+				$('#industry-config').slideToggle();
+				$(this).toggleClass('active');
+			}
+			else{
+				$('#industry-config').slideToggle(function(){
+					$('#show-config').toggleClass('active');
+					$('#industry-filter').slideToggle();
+					$('#show-filter').toggleClass('active');
+				});
+			}
+		});
+		$('#industry-filter a').click(function(){
+			var neighbor=$(this).parent().siblings().find('a');
+			if(neighbor.hasClass('selected')){
+				neighbor.removeClass('selected');
+			}
+			$(this).toggleClass('selected');
+			setTimeout(function(){
+				$('#industry-filter').slideUp()},500);
+		});
+		$('#industry-config a').click(function(){
+			$(this).toggleClass('selected');
+		})
+		$('#config-save').click(function(){
+			$('#success-modal').modal('show');
+		});
+		$(function(){
+			$('body').css('padding-bottom','40px');
+		})
+	</script>
+</body>
+</html>

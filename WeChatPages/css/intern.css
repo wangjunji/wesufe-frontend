@@ -1,0 +1,97 @@
+body{
+	padding-top: 51px!important;
+}
+.intern .navbar .navbar-form{
+	padding: 0px 10px !important;
+	border: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.intern .navbar .navbar-form .form-group{
+	width: 100%;
+}
+.intern .navbar .navbar-form .form-group .form-control{
+	width: 100%;
+}
+.intern .navbar .navbar-form .form-group a{
+	position: absolute;
+	right:20px;
+	top:30%;
+	color:#666;
+}
+.intern .navbar  .navbar-nav{
+	float: none !important;
+}
+.nav-main li a{
+	white-space: nowrap;
+}
+.intern .navbar  .navbar-nav>li{
+	float: left !important;
+	width: 33.333333%;
+}
+.intern .navbar  .navbar-nav{
+	margin: 0 !important;
+}
+.intern .nav-main{
+	min-height:40px !important;
+}
+#show-filter.active{
+	border-bottom: solid 3px #f69c9b;
+}
+#show-config.active{
+	border-bottom: solid 3px #82ccb5;
+}
+#industry-filter ul,#industry-config ul {
+	list-style: none;
+}
+#industry-filter ul li,#industry-config ul li{
+	width: 25%;
+	float: left;
+	margin: 0px;
+	border-right:solid 1px #f9f9f9;
+}
+#industry-filter ul li a,#industry-config ul li a{
+	padding: 10px 15px;
+	display: block;
+	position: relative;
+	color: #555;
+	background: #f9f9f9;
+	text-decoration: none;
+	border-bottom: solid 1px #ddd;
+}
+#industry-config ul li a i{
+	position:absolute;
+	right:10px;
+	top:30%;
+	color: #82ccb5;
+	display: none;
+}
+#industry-config ul li a.selected i{
+	position:absolute;
+	right:10px;
+	top:30%;
+	display: inline;
+}
+#industry-filter ul li a.selected{
+	background-color: #555;
+	color: #fff;
+}
+#industry-config .button-group{
+	width: 100%;
+	padding: 10px 0px;
+	background:#eee;
+}
+#intern-table th{
+	text-align: center;
+}
+.footer.fixed-bottom{
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	margin: 0px;
+}
+#config-save{
+	background: #82ccb5;
+	border-color: #50CD70;
+}

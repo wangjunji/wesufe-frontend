@@ -1,0 +1,110 @@
+body{
+	padding-bottom: 40px;
+}
+.footer.fixed-bottom{
+	margin: 0px;
+	position: fixed;
+	left:0;
+	bottom:0;
+	z-index: 2;
+}
+.report-container{
+	text-align: left;
+}
+.today{
+	padding: 40px 20px;
+	color: #fff;
+	position: relative;
+	background: url('../img/weather-bg.jpg') no-repeat;
+	height: 360px;
+	margin-top: -20px;
+}
+.today canvas{
+	position: absolute;
+	top: 50px;
+	left: 160px;
+}
+.today .temperature{
+	font-size: 70px;
+	font-family:helvetica,verdana,arial;
+	line-height: 70px;
+}
+.today .weather-type{
+	font-size: 20px;
+	font-weight: 700;
+}
+.today .divider{
+	margin: 10px 0;
+	border-bottom: solid 2px #aaa;
+	width: 60%;
+}
+.today .date{
+	font-size: 12px;
+}
+.today .city{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	font-size: 18px;
+	font-weight: 800;
+}
+.today .city button{
+	margin-left: 10px;
+}
+.today .city .input-container{
+	padding: 8px;
+	background: #444;
+	box-shadow: #222 1px 1px 4px;
+	border-radius: 10px;
+	position: absolute;
+	right: -150px;
+	top:-10px;
+}
+.today .city .input-container input{
+	border-radius: 6px;
+	border-color: transparent;
+	height: 24px;
+	width: 120px;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 6px 4px;
+	color:#444;
+}
+.today .city .input-container .triangle{
+	position:absolute;
+	top:16px;
+	left:-16px;
+	width:0;
+	height:0;
+	font-size:0;
+	border:solid 8px;
+	border-color: transparent;
+	border-right-color: #444;
+}
+.today .city .input-container i{
+	position: absolute;
+	top:16px;
+	right: 14px;
+	color: #ccc;
+	font-size: 16px;
+	cursor: pointer;
+}
+.more ul{
+	list-style: none;
+}
+.more ul>li{
+	position: relative;
+	padding: 16px 20px;
+	background-color: #eee;
+	border-bottom: solid 1px #ccc;
+	font-weight: 700;
+}
+.more ul>li canvas{
+	position: absolute;
+	top:6px;
+	left: 80px;
+}
+.more ul>li span{
+	float: right;
+	font-weight: 600;
+}

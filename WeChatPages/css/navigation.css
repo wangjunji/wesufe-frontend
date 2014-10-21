@@ -1,0 +1,105 @@
+body {
+    padding-bottom: 40px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+.footer.fixed-bottom {
+    margin: 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.sscontainer {
+    padding: 0;
+}
+#sudoku .grid-item {
+    padding: 20px;
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+    background-color: #fff;
+    border: #eee solid 2px;
+    position: relative;
+}
+#sudoku .grid-item .ribbon-wrapper {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+}
+.ribbon {
+    font: 16px Arial;
+    color: #fff;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -5px;
+    top: 9px;
+    width: 108px;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+.ribbon.green{
+	background-color: #BFDC7A;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
+    background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
+    background-image: -moz-linear-gradient(top, #BFDC7A, #8EBF45);
+    background-image: -ms-linear-gradient(top, #BFDC7A, #8EBF45);
+    background-image: -o-linear-gradient(top, #BFDC7A, #8EBF45);
+}
+.ribbon.red{
+	background-color: #FF342F;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF342F), to(#FD2222));
+    background-image: -webkit-linear-gradient(top, #FF342F, #FD2222);
+    background-image: -moz-linear-gradient(top, #FF342F, #FD2222);
+    background-image: -ms-linear-gradient(top, #FF342F, #FD2222);
+    background-image: -o-linear-gradient(top, #FF342F, #FD2222);
+}
+.ribbon:before, .ribbon:after {
+    content: "";
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    bottom: -3px;
+}
+.ribbon.green:before,.ribbon.green:after{
+	border-top: 3px solid #6e8900;
+}
+.ribbon.red:before,.ribbon.red:after{
+	border-top: 3px solid #690505;
+}
+.ribbon:before {
+    left: 0;
+}
+.ribbon:after {
+    right: 0;
+}
+#sudoku .grid-item img {
+    max-width: 30%;
+    min-width: 80px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#sudoku .grid-item h4 {
+    color: #999;
+    margin-top: 10px;
+    font-size: 16px;
+}
+#sudoku .grid-item a{
+	text-decoration: none;
+}
+#sudoku .grid-item a:hover img{
+	-webkit-transform: rotate(-5deg) scale(1.1);
+	-ms-transform: rotate(-5deg) scale(1.1);
+	-o-transform: rotate(-5deg) scale(1.1);
+	transform: rotate(-5deg) scale(1.1);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/bus.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#"><i class="fa fa-bus"></i> 公交信息</a>
+    </div>
+    <div class="inner-page bus">
+        <div class="header">
+            <h2><i class="fa fa-2x fa-bus"></i>100路</h2>
+            <h4>
+                <span id="start">吉浦路仁德路</span> -
+                <span id="terminal">乍浦路塘沽路</span>
+            </h4>
+        </div>
+        <div class="switch"><i id="switch-button" class="fa fa-3x fa-toggle-on"></i>
+        </div>
+        <div class="wrapper">
+            <div class="stop-list">
+                <ul id="stopsGo">
+                    <li>吉浦路仁德路</li>
+                    <li>武川路武东路</li>
+                    <li>政立路国权北路</li>
+                    <li>政立路逸仙路</li>
+                    <li>逸仙路场中路</li>
+                    <li>江湾镇</li>
+                    <li>逸仙路纪念路</li>
+                    <li>曲阳路中山北二路</li>
+                    <li>赤峰路曲阳路</li>
+                    <li>玉田路曲阳路</li>
+                    <li>大连西路曲阳路</li>
+                    <li>欧阳路大连西路</li>
+                    <li>欧阳路祥德路</li>
+                    <li>欧阳路四达路</li>
+                    <li>欧阳路吉祥路</li>
+                    <li>四平路溧阳路</li>
+                    <li>吴淞路海宁路</li>
+                    <li>乍浦路塘沽路</li>
+                </ul>
+                <ul id="stopsBack" style="display:none">
+                    <li>乍浦路塘沽路</li>
+                    <li>吴淞路海宁路</li>
+                    <li>四平路溧阳路</li>
+                    <li>欧阳路吉祥路</li>
+                    <li>欧阳路四达路</li>
+                    <li>欧阳路祥德路</li>
+                    <li>欧阳路大连西路</li>
+                    <li>大连西路曲阳路</li>
+                    <li>玉田路曲阳路</li>
+                    <li>赤峰路曲阳路</li>
+                    <li>曲阳路中山北二路</li>
+                    <li>逸仙路纪念路</li>
+                    <li>江湾镇</li>
+                    <li>逸仙路场中路</li>
+                    <li>政立路逸仙路</li>
+                    <li>政立路国权北路</li>
+                    <li>武川路武东路</li>
+                    <li>吉浦路仁德路</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer fixed-bottom">
+        2014 &copy; WeSufe
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('#switch-button').click(function() {
+        $(this).toggleClass('fa-rotate-180');
+        var s = $('#start').text();
+        var t = $('#terminal').text();
+        $('#start').text(t);
+        $('#terminal').text(s);
+        $('#stopsBack').fadeToggle();
+        $('#stopsGo').fadeToggle();
+        return false;
+    })
+    </script>
+</body>
+
+</html>

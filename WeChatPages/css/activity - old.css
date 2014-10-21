@@ -1,0 +1,25 @@
+.activity img{
+	width: 300px;
+	margin: 10px auto;
+}
+.activity .img-desc{
+	padding: 10px;
+	margin: 0px 20px;
+	margin-bottom: 40px;
+	background: #f6f6f6;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+}
+.activity .table td{
+	border: none;
+}
+.activity .table td:nth-child(2n+1){
+	text-align: right;
+	width: 40%;
+}
+.activity .table td:nth-child(2n+2){
+	text-align: left;
+}
+.activity .table .label{
+	margin: 0px 4px;
+}

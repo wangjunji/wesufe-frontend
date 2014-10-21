@@ -1,0 +1,32 @@
+body{
+	padding-bottom: 40px;
+}
+.library blockquote{
+	margin: 20px 10px;
+}
+.library .table th{
+	text-align: center;
+}
+.library .table td{
+	text-align: left;
+}
+.footer.fixed-bottom{
+	margin: 0px;
+	position: fixed;
+	left:0;
+	bottom:0;
+	z-index: 2;
+}
+svg{
+	margin-top:20px;
+}
+svg path{
+	fill:#ccc;
+}
+svg.hover-effect path{
+	fill:#999;
+}
+
+#result{
+	
+}
