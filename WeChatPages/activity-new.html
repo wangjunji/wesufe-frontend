@@ -1,226 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>上财微助手</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Your description">
-	<meta name="keywords" content="Your Keywords">
-	<meta name="author" content="Author Name">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!--Custom CSS-->
-	<link rel="stylesheet" href="css/activity.css">
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/activity.css">
     <!--[if lt IE 9]>
         <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
         <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-	<div class="navbar navbar-default navbar-fixed-top">
-		<a class="navbar-brand" href="#"><i class="fa fa-camera"></i> 校园活动</a>
-	</div>
-	<div class="inner-page activity">
-		<div class="container">
-			<ul>
-				<li>
-					<div class="activity-container">
-						<div class="week">
-							<i class="fa fa-5x fa-bookmark red"></i>
-							<span>周一</span>
-						</div>
-						<img class="img-responsive" src="img/ActivityImage/1.jpg"/>
-						<div class="img-desc">
-							<h4>饮食文化社招新</h4>
-							<p><i class="fa fa-clock-o red"></i><span class="hidden-xs">活动时间：</span> 2014年9月12日12:00</p>
-							<p><i class="fa fa-map-marker yellow"></i><span class="hidden-xs">活动地点：</span> 绿叶步行街</p>
-							<p><i class="fa fa-building green"></i><span class="hidden-xs">举办部门：</span> 社团联</p>
-							<p><i class="fa fa-tag blue"></i><span class="hidden-xs">活动标签：</span> 社团，招新</p>
-							<p><i class="fa fa-volume-up purple"></i><span class="hidden-xs">活动描述：</span> 汇集上海各高校没事，吃货们快来加入吧</p>
-						</div>
-						<div class="toolbar">
-							<i class="fa fa-comment"></i> <span class="comment-count">3</span>
-							<i class="fa fa-thumbs-up"></i> <span class="like-count">23</span>
-						</div>
-						<div class="reply-area">
-							<div class="input-group">
-								<input type="text" class="form-control input-sm" data-from="user" data-to="">
-								<span class="input-group-addon sent">发送</span>
-							</div>
-							<div class="reply-container">
-								<div class="triangle"></div>
-								<ul>
-									<li><span class="from">AAA</span><span class="message">: 沙发~</span></li>
-									<li><span class="from">BBB</span>回复<span class="to">AAA</span>: 你好！</li>
-									<li><span class="from">AAA</span>回复<span class="to">BBB</span>: 你好~</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="activity-container">
-						<div class="week">
-							<i class="fa fa-5x fa-bookmark red"></i>
-							<span>周一</span>
-						</div>
-						<img class="img-responsive" src="img/ActivityImage/1.jpg"/>
-						<div class="img-desc">
-							<h4>饮食文化社招新</h4>
-							<p><i class="fa fa-clock-o red"></i><span class="hidden-xs">活动时间：</span> 2014年9月12日12:00</p>
-							<p><i class="fa fa-map-marker yellow"></i><span class="hidden-xs">活动地点：</span> 绿叶步行街</p>
-							<p><i class="fa fa-building green"></i><span class="hidden-xs">举办部门：</span> 社团联</p>
-							<p><i class="fa fa-tag blue"></i><span class="hidden-xs">活动标签：</span> 社团，招新</p>
-							<p><i class="fa fa-volume-up purple"></i><span class="hidden-xs">活动描述：</span> 汇集上海各高校没事，吃货们快来加入吧</p>
-						</div>
-						<div class="toolbar">
-							<i class="fa fa-comment"></i> <span class="comment-count">3</span>
-							<i class="fa fa-thumbs-up"></i> <span class="like-count">23</span>
-						</div>
-						<div class="reply-area">
-							<div class="input-group">
-								<input type="text" class="form-control input-sm" data-from="user" data-to="">
-								<span class="input-group-addon sent">发送</span>
-							</div>
-							<div class="reply-container">
-								<div class="triangle"></div>
-								<ul>
-									<li><span class="from">AAA</span><span class="message">: 沙发~</span></li>
-									<li><span class="from">BBB</span>回复<span class="to">AAA</span>: 你好！</li>
-									<li><span class="from">AAA</span>回复<span class="to">BBB</span>: 你好~</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="activity-container">
-						<div class="week">
-							<i class="fa fa-5x fa-bookmark red"></i>
-							<span>周一</span>
-						</div>
-						<img class="img-responsive" src="img/ActivityImage/1.jpg"/>
-						<div class="img-desc">
-							<h4>饮食文化社招新</h4>
-							<p><i class="fa fa-clock-o red"></i><span class="hidden-xs">活动时间：</span> 2014年9月12日12:00</p>
-							<p><i class="fa fa-map-marker yellow"></i><span class="hidden-xs">活动地点：</span> 绿叶步行街</p>
-							<p><i class="fa fa-building green"></i><span class="hidden-xs">举办部门：</span> 社团联</p>
-							<p><i class="fa fa-tag blue"></i><span class="hidden-xs">活动标签：</span> 社团，招新</p>
-							<p><i class="fa fa-volume-up purple"></i><span class="hidden-xs">活动描述：</span> 汇集上海各高校没事，吃货们快来加入吧</p>
-						</div>
-						<div class="toolbar">
-							<i class="fa fa-comment"></i> <span class="comment-count">3</span>
-							<i class="fa fa-thumbs-up"></i> <span class="like-count">23</span>
-						</div>
-						<div class="reply-area">
-							<div class="input-group">
-								<input type="text" class="form-control input-sm" data-from="user" data-to="">
-								<span class="input-group-addon sent">发送</span>
-							</div>
-							<div class="reply-container">
-								<div class="triangle"></div>
-								<ul>
-									<li><span class="from">AAA</span><span class="message">: 沙发~</span></li>
-									<li><span class="from">BBB</span>回复<span class="to">AAA</span>: 你好！</li>
-									<li><span class="from">AAA</span>回复<span class="to">BBB</span>: 你好~</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="activity-container">
-						<div class="week">
-							<i class="fa fa-5x fa-bookmark red"></i>
-							<span>周一</span>
-						</div>
-						<img class="img-responsive" src="img/ActivityImage/1.jpg"/>
-						<div class="img-desc">
-							<h4>饮食文化社招新</h4>
-							<p><i class="fa fa-clock-o red"></i><span class="hidden-xs">活动时间：</span> 2014年9月12日12:00</p>
-							<p><i class="fa fa-map-marker yellow"></i><span class="hidden-xs">活动地点：</span> 绿叶步行街</p>
-							<p><i class="fa fa-building green"></i><span class="hidden-xs">举办部门：</span> 社团联</p>
-							<p><i class="fa fa-tag blue"></i><span class="hidden-xs">活动标签：</span> 社团，招新</p>
-							<p><i class="fa fa-volume-up purple"></i><span class="hidden-xs">活动描述：</span> 汇集上海各高校没事，吃货们快来加入吧</p>
-						</div>
-						<div class="toolbar">
-							<i class="fa fa-comment"></i> <span class="comment-count">3</span>
-							<i class="fa fa-thumbs-up"></i> <span class="like-count">23</span>
-						</div>
-						<div class="reply-area">
-							<div class="input-group">
-								<input type="text" class="form-control input-sm" data-from="user" data-to="">
-								<span class="input-group-addon sent">发送</span>
-							</div>
-							<div class="reply-container">
-								<div class="triangle"></div>
-								<ul>
-									<li><span class="from">AAA</span><span class="message">: 沙发~</span></li>
-									<li><span class="from">BBB</span>回复<span class="to">AAA</span>: 你好！</li>
-									<li><span class="from">AAA</span>回复<span class="to">BBB</span>: 你好~</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-			</div>	
-		</div>
-	</div>
-	<div class="fixed-bottom footer">
-		2014 &copy; WeSufe
-	</div>
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			$('.reply-area').hide();
-			$('.toolbar .fa-comment').click(function(){
-				$(this).parent().siblings('.reply-area').fadeIn();
-			})
-			$('.toolbar .fa-thumbs-up').click(function(){
-				var $like=$(this).siblings('.like-count');
-				$like.text($like.text()*1+1);
-				$(this).css('color','#f69c9b')
-			});
-			$(document).click(function(){
-			    $('.reply-area').hide();
-			});
 
-			$('.reply-area,.toolbar i').click(function(oEvent){
-			    //取消冒泡
-			    oEvent = oEvent || window.event;
-			    if(document.all){
-			        oEvent.cancelBubble = true;
-			    }else{
-			        oEvent.stopPropagation();
-			    }
-			});
-			$('.reply-container>ul>li').click(function(){
-				var $input=$(this).parents('.reply-area').find('input')
-				var to=$(this).find('.from').text();
-				$input.attr('data-to',to);
-				$input.focus();
-			})
-			$('.reply-area .sent').click(function() {
-				var from="user";
-				var to=$(this).siblings('input').attr('data-to');
-				var message=$(this).siblings('input').val();
-				if(to!=""){
-					var html='<li><span class="from">'+from+'</span>回复<span class="to">'+to+'</span>: '+message+'</li>';
-				}
-				else{
-					var html='<li><span class="from">'+from+'</span>: '+message+'</li>';
-				}
-				$(this).parent().siblings('.reply-container').find('ul').append(html);
-				var $comment=$(this).parents('.reply-area').siblings('.toolbar').find('.comment-count');
-				$comment.text($comment.text()*1+1);
-			});
-		})
-	</script>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#"><i class="fa fa-camera"></i> 校园活动</a>
+    </div>
+    <div class="inner-page activity">
+        <ul class="filter">
+            <li><a href="#"><i class="fa fa-bars"></i></a>
+            </li>
+            <li data-filter="讲座"><a href="#">讲座</a>
+            </li>
+            <li data-filter="公益"><a href="#">公益</a>
+            </li>
+            <li data-filter="创新"><a href="#">创新</a>
+            </li>
+            <li data-filter="文体"><a href="#">文体</a>
+            </li>
+        </ul>
+        <div class="container">
+            <ul class="activity-list">
+                <li data-filter="公益">
+                    <div class="activity-container">
+                        <div class="week">
+                            <i class="fa fa-5x fa-bookmark red"></i>
+                            <span>周一</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a class="fancybox" rel="group" href="img/ActivityImage/1.jpg">
+                                    <img class="img-responsive" src="img/ActivityImage/1.jpg" alt="饮食文化社招新" />
+                                </a>
+                            </div>
+                            <div class="col-xs-9">
+                                <div class="img-desc">
+                                    <h4>饮食文化社招新</h4>
+                                    <p><i class="fa fa-clock-o red"></i>
+                                        <span class="hidden-xs">活动时间：</span>2014年9月12日12:00</p>
+                                    <p><i class="fa fa-map-marker yellow"></i>
+                                        <span class="hidden-xs">活动地点：</span>绿叶步行街</p>
+                                    <p><i class="fa fa-building green"></i>
+                                        <span class="hidden-xs">举办部门：</span>社团联</p>
+                                    <p><i class="fa fa-tag blue"></i>
+                                        <span class="hidden-xs">活动标签：</span>社团，招新</p>
+                                    <p><i class="fa fa-volume-up purple"></i>
+                                        <span class="hidden-xs">活动描述：</span>汇集上海各高校没事，吃货们快来加入吧</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbar">
+                            <i class="fa fa-comment"></i> 
+                            <span class="comment-count">3</span>
+                            <i class="fa fa-thumbs-up"></i> 
+                            <span class="like-count">23</span>
+                        </div>
+                        <div class="reply-area">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" data-from="user" data-to="">
+                                <span class="input-group-addon sent">发送</span>
+                            </div>
+                            <div class="reply-container">
+                                <div class="triangle"></div>
+                                <ul>
+                                    <li>
+                                        <span class="from">AAA</span>
+                                        <span class="message">: 沙发~</span>
+                                    </li>
+                                    <li>
+                                        <span class="from">BBB</span>回复
+                                        <span class="to">AAA</span>: 你好！</li>
+                                    <li>
+                                        <span class="from">AAA</span>回复
+                                        <span class="to">BBB</span>: 你好~</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-filter="文体">
+                    <div class="activity-container">
+                        <div class="week">
+                            <i class="fa fa-5x fa-bookmark red"></i>
+                            <span>周一</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a class="fancybox" rel="group" href="img/ActivityImage/1.jpg">
+                                    <img class="img-responsive" src="img/ActivityImage/1.jpg" alt="饮食文化社招新" />
+                                </a>
+                            </div>
+                            <div class="col-xs-9">
+                                <div class="img-desc">
+                                    <h4>饮食文化社招新</h4>
+                                    <p><i class="fa fa-clock-o red"></i>
+                                        <span class="hidden-xs">活动时间：</span>2014年9月12日12:00</p>
+                                    <p><i class="fa fa-map-marker yellow"></i>
+                                        <span class="hidden-xs">活动地点：</span>绿叶步行街</p>
+                                    <p><i class="fa fa-building green"></i>
+                                        <span class="hidden-xs">举办部门：</span>社团联</p>
+                                    <p><i class="fa fa-tag blue"></i>
+                                        <span class="hidden-xs">活动标签：</span>社团，招新</p>
+                                    <p><i class="fa fa-volume-up purple"></i>
+                                        <span class="hidden-xs">活动描述：</span>汇集上海各高校没事，吃货们快来加入吧</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbar">
+                            <i class="fa fa-comment"></i> 
+                            <span class="comment-count">3</span>
+                            <i class="fa fa-thumbs-up"></i> 
+                            <span class="like-count">23</span>
+                        </div>
+                        <div class="reply-area">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" data-from="user" data-to="">
+                                <span class="input-group-addon sent">发送</span>
+                            </div>
+                            <div class="reply-container">
+                                <div class="triangle"></div>
+                                <ul>
+                                    <li>
+                                        <span class="from">AAA</span>
+                                        <span class="message">: 沙发~</span>
+                                    </li>
+                                    <li>
+                                        <span class="from">BBB</span>回复
+                                        <span class="to">AAA</span>: 你好！</li>
+                                    <li>
+                                        <span class="from">AAA</span>回复
+                                        <span class="to">BBB</span>: 你好~</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-filter="讲座">
+                    <div class="activity-container">
+                        <div class="week">
+                            <i class="fa fa-5x fa-bookmark red"></i>
+                            <span>周一</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a class="fancybox" rel="group" href="img/ActivityImage/1.jpg">
+                                    <img class="img-responsive" src="img/ActivityImage/1.jpg" alt="互联网金融讲座" />
+                                </a>
+                            </div>
+                            <div class="col-xs-9">
+                                <div class="img-desc">
+                                    <h4>互联网金融讲座</h4>
+                                    <p><i class="fa fa-clock-o red"></i>
+                                        <span class="hidden-xs">活动时间：</span>2014年9月12日12:00</p>
+                                    <p><i class="fa fa-map-marker yellow"></i>
+                                        <span class="hidden-xs">活动地点：</span>绿叶步行街</p>
+                                    <p><i class="fa fa-building green"></i>
+                                        <span class="hidden-xs">举办部门：</span>社团联</p>
+                                    <p><i class="fa fa-tag blue"></i>
+                                        <span class="hidden-xs">活动标签：</span>社团，招新</p>
+                                    <p><i class="fa fa-volume-up purple"></i>
+                                        <span class="hidden-xs">活动描述：</span>汇集上海各高校没事，吃货们快来加入吧</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbar">
+                            <i class="fa fa-comment"></i> 
+                            <span class="comment-count">3</span>
+                            <i class="fa fa-thumbs-up"></i> 
+                            <span class="like-count">23</span>
+                        </div>
+                        <div class="reply-area">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" data-from="user" data-to="">
+                                <span class="input-group-addon sent">发送</span>
+                            </div>
+                            <div class="reply-container">
+                                <div class="triangle"></div>
+                                <ul>
+                                    <li>
+                                        <span class="from">AAA</span>
+                                        <span class="message">: 沙发~</span>
+                                    </li>
+                                    <li>
+                                        <span class="from">BBB</span>回复
+                                        <span class="to">AAA</span>: 你好！</li>
+                                    <li>
+                                        <span class="from">AAA</span>回复
+                                        <span class="to">BBB</span>: 你好~</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fixed-bottom footer">
+        2014 &copy; WeSufe
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.circleMenu.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        //fancybox
+        $('.fancybox').fancybox({
+            beforeShow: function() {
+                var alt = this.element.find('img').attr('alt');
+
+                this.inner.find('img').attr('alt', alt);
+
+                this.title = alt;
+            }
+        });
+        //circle menu
+        $('ul.filter').circleMenu({
+            item_diameter: 40,
+            circle_radius: 120,
+            direction: 'bottom-left',
+            trigger:'click'
+        });
+        //filter
+        $('.filter>li').not(':first').each(function(){
+        	var $filter=$(this);
+        	var category=$filter.data('filter');
+        	var $list=$('.activity-list>li');
+        	$filter.click(function(){
+        		$list.hide();
+        		$list.each(function(){
+        			if($(this).data('filter')==category){
+        				$(this).fadeIn();
+        			}
+        		})
+        	});
+        });
+        //page js
+        $('.reply-area').hide();
+        $('.toolbar .fa-comment').click(function() {
+            $(this).parent().siblings('.reply-area').fadeIn();
+        })
+        $('.toolbar .fa-thumbs-up').click(function() {
+            var $like = $(this).siblings('.like-count');
+            $like.text($like.text() * 1 + 1);
+            $(this).css('color', '#f69c9b')
+        });
+        $(document).click(function() {
+            $('.reply-area').hide();
+        });
+
+        $('.reply-area,.toolbar i').click(function(oEvent) {
+            //取消冒泡
+            oEvent = oEvent || window.event;
+            if (document.all) {
+                oEvent.cancelBubble = true;
+            } else {
+                oEvent.stopPropagation();
+            }
+        });
+        $('.reply-container>ul>li').click(function() {
+            var $input = $(this).parents('.reply-area').find('input')
+            var to = $(this).find('.from').text();
+            $input.attr('data-to', to);
+            $input.focus();
+        })
+        $('.reply-area .sent').click(function() {
+            var from = "user";
+            var to = $(this).siblings('input').attr('data-to');
+            var message = $(this).siblings('input').val();
+            if (to != "") {
+                var html = '<li><span class="from">' + from + '</span>回复<span class="to">' + to + '</span>: ' + message + '</li>';
+            } else {
+                var html = '<li><span class="from">' + from + '</span>: ' + message + '</li>';
+            }
+            $(this).parent().siblings('.reply-container').find('ul').append(html);
+            var $comment = $(this).parents('.reply-area').siblings('.toolbar').find('.comment-count');
+            $comment.text($comment.text() * 1 + 1);
+        });
+    })
+    </script>
 </body>
+
 </html>
