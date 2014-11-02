@@ -44,7 +44,8 @@
             </div>
         </div>
         <div class="bg-img">
-            <img src="img/translation.jpg">
+         <div class="img-container">            <img class="img-responsive" src="img/translation.jpg"></div>
+
             <div id="dict-result" class="alert alert-warning fade" role="alert">
                 <button type="button" class="close" id="alert-close">
                     <span aria-hidden="true">×</span>
@@ -195,9 +196,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $(function() {
-        var h = $(window).height() - 165;
-        $('.bg-img').height(h);
+        var bottom_h=$('.search-bottom').height();
+        var img_h = $(window).height() - 165;
+        $('.bg-img').height(img_h);
+        var modal_h = $(window).height() - bottom_h-201;
+        $('#translation-modal .modal-body').height(modal_h);
         $('#translation').click(function() {
+             resetLayout();
             $('.search-bottom,.dict').addClass('scroll');
             if ($('#dict').hasClass('active')) {
                 $(this).toggleClass('btn-info active');
@@ -205,6 +210,7 @@
             }
         });
         $('#dict').click(function() {
+             resetLayout();
             $('.search-bottom,.dict').removeClass('scroll');
             if ($('#translation').hasClass('active')) {
                 $(this).toggleClass('btn-info active');
@@ -221,11 +227,12 @@
             });
         });
         $('#dict-search').click(function() {
+            resetLayout();
             $('.loading-mask').fadeIn();
-            setTimeout(function(){
+            setTimeout(function() {
                 $('.loading-mask').fadeOut();
                 $('#dict-result').addClass('in');
-            },1000);
+            }, 1000);
         });
         $('#alert-close').click(function() {
             $('#dict-result').removeClass('in');
@@ -233,26 +240,19 @@
         $('#translation-modal').modal({
             backdrop: false
         }).modal('hide');
-        $('#translate').click(function(){
+        $('#translate').click(function() {
+             resetLayout();
             $('.loading-mask').fadeIn();
-            setTimeout(function(){
+            setTimeout(function() {
                 $('.loading-mask').fadeOut();
                 $('#translation-modal').modal('show');
-            },1000);
+            }, 1000);
         })
-        $(document).click(function() {
+
+        function resetLayout() {
             $('#translation-modal').modal('hide');
             $('#dict-result').removeClass('in');
-        });
-        $('#translation-modal .modal-dialog,#dict-result,#dict-search,#translate').click(function(oEvent) {
-            //取消冒泡
-            oEvent = oEvent || window.event;
-            if (document.all) {
-                oEvent.cancelBubble = true;
-            } else {
-                oEvent.stopPropagation();
-            }
-        });
+        }
     })
     </script>
 </body>

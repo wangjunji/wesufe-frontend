@@ -3,7 +3,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 3001;
 }
 body {
     padding-top: 50px;
@@ -29,8 +29,13 @@ body {
 .bg-img {
     position: relative;
 }
-.bg-img>img {
-    padding-top: 40px;
+.bg-img .img-container{
+	padding-top: 40px;
+	width: 60%;
+	margin: 0 auto;
+}
+.bg-img .img-container>img {
+    margin: 0 auto;
 }
 #dict-result{
 	position: absolute;
@@ -75,7 +80,8 @@ body {
     position: absolute;
     padding-top: 20px;
     width: 100%;
-    bottom: -100px;
+    bottom: -120px;
+    z-index:3000;
     -webkit-transition: bottom .5s;
     -o-transition: bottom .5s;
     transition: bottom .5s;
@@ -133,6 +139,7 @@ body {
 }
 #translation-modal .modal-body{
 	padding-top: 0;
+	overflow-y:scroll;
 }
 #translation-modal .modal-footer{
 	padding:4px 10px 4px 0;
@@ -150,6 +157,7 @@ body {
 	border-radius: 0;
 	background-color: #fcf8e3;
 	border-color: #faebcc;
+	box-shadow: none;
 }
 .loading-mask{
 	display: none;
