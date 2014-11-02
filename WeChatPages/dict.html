@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/flags.css">
+    <link rel="stylesheet" href="css/dict.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#"><i class="fa fa-book"></i> 在线翻译</a>
+        <div class="menu">
+            <a id="dict" class="btn btn-info active" href="#">词典</a>
+            <a id="translation" class="btn" href="#">翻译</a>
+        </div>
+    </div>
+    <div class="inner-page dict">
+        <div class="search-top">
+            <div class="container">
+                <div class="input-group">
+                    <input type="text" placeholder="请输入您要查询的单词" class="form-control">
+                    <div class="input-group-btn">
+                        <button id="dict-search" class="btn btn-info modal-trigger" data-modal="result-modal"><i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-img">
+            <img src="img/translation.jpg">
+            <div id="dict-result" class="alert alert-warning fade" role="alert">
+                <button type="button" class="close" id="alert-close">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <div class="word">
+                    <strong>do</strong>
+                    <small>英 [
+                        <span id="ph_en">du:</span>]</small>
+                    <small>美 [
+                        <span id="ph_am">du</span>]</small>
+                </div>
+                <ul>
+                    <li>aux.（构成疑问句和否定句）;（代替动词）;（用于加强语气)
+                    </li>
+                    <li>vt.& vi. 做;干;学习;研究
+                    </li>
+                </ul>
+            </div>
+            <!--  <div class="backdrop">
+                <div class="result">
+                    <p>
+                        越来越多受英文教育的海外华人父母，已经认识到孩子在掌握不可或缺的英文的同时，也通晓中文的重要性。中国的崛起，让他们充分认识到孩子掌握双语的好处——既能增加他们的就业机会，也能让他们接触和熟悉东西方两种不同的文化。
+                    </p>
+                    <p>
+                        More and more English education by overseas Chinese parents, have recognized the child in mastering indispensable English at the same time, also know the importance of Chinese. Chinese rise, let them fully aware of the benefits of child bilingual -- can increase their employment opportunities, also can let their exposure to and familiarity with the two different culture stuff.
+                    </p>
+                </div>
+            </div> -->
+        </div>
+        <div class="search-bottom">
+            <div class="container">
+                <div class="search-area">
+                    <textarea name="" id="" rows="6" class="form-control"></textarea>
+                    <div class="search-toolbar">
+                        <div class="btn-group dropup">
+                            <a data-toggle="dropdown" class="btn btn-default">
+                                <img class="flag flag-gb">
+                            </a>
+                            <input type="hidden" id="from" name="from" value="en">
+                            <button href="#" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li data-lang="zh">
+                                    <img class="flag flag-cn">
+                                </li>
+                                <li data-lang="en">
+                                    <img class="flag flag-gb">
+                                </li>
+                                <li data-lang="jp">
+                                    <img class="flag flag-jp">
+                                </li>
+                                <li data-lang="kor">
+                                    <img class="flag flag-kr">
+                                </li>
+                                <li data-lang="de">
+                                    <img class="flag flag-de">
+                                </li>
+                                <li data-lang="fra">
+                                    <img class="flag flag-fr">
+                                </li>
+                                <li data-lang="spa">
+                                    <img class="flag flag-es">
+                                </li>
+                                <li data-lang="ru">
+                                    <img class="flag flag-ru">
+                                </li>
+                                <li data-lang="pt">
+                                    <img class="flag flag-pt">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="arrow">
+                            <i class="fa fa-2x fa-angle-double-down"></i>
+                        </div>
+                        <div class="btn-group dropup">
+                            <a data-toggle="dropdown" class="btn btn-default">
+                                <img class="flag flag-cn">
+                            </a>
+                            <input type="hidden" id="to" name="to" value="zh">
+                            <button href="#" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li data-lang="zh">
+                                    <img class="flag flag-cn">
+                                </li>
+                                <li data-lang="en">
+                                    <img class="flag flag-gb">
+                                </li>
+                                <li data-lang="jp">
+                                    <img class="flag flag-jp">
+                                </li>
+                                <li data-lang="kor">
+                                    <img class="flag flag-kr">
+                                </li>
+                                <li data-lang="de">
+                                    <img class="flag flag-de">
+                                </li>
+                                <li data-lang="fra">
+                                    <img class="flag flag-fr">
+                                </li>
+                                <li data-lang="spa">
+                                    <img class="flag flag-es">
+                                </li>
+                                <li data-lang="ru">
+                                    <img class="flag flag-ru">
+                                </li>
+                                <li data-lang="pt">
+                                    <img class="flag flag-pt">
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="translate" type="button" class="btn btn-block btn-info btn-sm">翻译</button>
+                    </div>
+                </div>
+                <p>提示：系统默认为中英互译，如需翻译其他语种，请自行切换</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="translation-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>【翻译结果】</h4>
+                </div>
+                <div class="modal-body">
+                    More and more English education by overseas Chinese parents, have recognized the child in mastering indispensable English at the same time, also know the importance of Chinese. Chinese rise, let them fully aware of the benefits of child bilingual -- can increase their employment opportunities, also can let their exposure to and familiarity with the two different culture stuff.
+                </div>
+                <div class="modal-footer">
+                    翻译结果仅供参考
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <div class="loading-mask">
+        <div class="loading"><i class="fa fa-spin fa-spinner"></i> 查询中...</div>
+    </div>
+    <div class="footer fixed-bottom">
+        2014 &copy; WeSufe
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var h = $(window).height() - 165;
+        $('.bg-img').height(h);
+        $('#translation').click(function() {
+            $('.search-bottom,.dict').addClass('scroll');
+            if ($('#dict').hasClass('active')) {
+                $(this).toggleClass('btn-info active');
+                $('#dict').toggleClass('btn-info active');
+            }
+        });
+        $('#dict').click(function() {
+            $('.search-bottom,.dict').removeClass('scroll');
+            if ($('#translation').hasClass('active')) {
+                $(this).toggleClass('btn-info active');
+                $('#translation').toggleClass('btn-info active');
+            }
+        });
+        $('.dropup').each(function() {
+            var select = $(this).find('a').eq(0);
+            $(this).find('ul>li').each(function() {
+                $(this).bind('click', function() {
+                    select.html($(this).html());
+                    select.siblings('input').val($(this).data('lang'))
+                })
+            });
+        });
+        $('#dict-search').click(function() {
+            $('.loading-mask').fadeIn();
+            setTimeout(function(){
+                $('.loading-mask').fadeOut();
+                $('#dict-result').addClass('in');
+            },1000);
+        });
+        $('#alert-close').click(function() {
+            $('#dict-result').removeClass('in');
+        });
+        $('#translation-modal').modal({
+            backdrop: false
+        }).modal('hide');
+        $('#translate').click(function(){
+            $('.loading-mask').fadeIn();
+            setTimeout(function(){
+                $('.loading-mask').fadeOut();
+                $('#translation-modal').modal('show');
+            },1000);
+        })
+        $(document).click(function() {
+            $('#translation-modal').modal('hide');
+            $('#dict-result').removeClass('in');
+        });
+        $('#translation-modal .modal-dialog,#dict-result,#dict-search,#translate').click(function(oEvent) {
+            //取消冒泡
+            oEvent = oEvent || window.event;
+            if (document.all) {
+                oEvent.cancelBubble = true;
+            } else {
+                oEvent.stopPropagation();
+            }
+        });
+    })
+    </script>
+</body>
+
+</html>
