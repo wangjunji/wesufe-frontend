@@ -167,6 +167,19 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+    //点击外面收起菜单
+    $(document).click(function() {
+        $('.dropdown').fadeOut('fast');
+        $('#filter').removeClass('active');
+    });
+    $('#filter,.dropdown').click(function(oEvent) {
+        oEvent = oEvent || window.event;
+        if (document.all) {
+            oEvent.cancelBubble = true;
+        } else {
+            oEvent.stopPropagation();
+        }
+    });
     //过滤菜单切换
     $('#filter').click(function() {
         $(this).toggleClass('active');
@@ -237,6 +250,7 @@
         //加载过滤列表
     function initLayout(type) {
             var html = "";
+            $('.level-2 ul').empty();
             if (type === "district") {
                 $('#filter-all').html('<a data-link="area" href="#">全部商区</a>');
                 $('#filter-all a').bind('click',liClick)
