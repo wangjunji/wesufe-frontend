@@ -28,3 +28,41 @@ body{
 table thead tr th{
 	text-align: center;
 }
+
+.station-to-station h3.page-header small{
+	margin-left: 10px;
+}
+.station-to-station .panel-title{
+	text-align: left;
+}
+.station-to-station .panel-title a{
+	display: block;
+	line-height: 22px;
+	text-decoration: none;
+}
+.station-to-station .panel-title .train-type{
+	margin-right: 6px;
+	padding: 3px 6px;
+}
+.station-to-station .panel-title .train-no{
+	display: inline-block;
+	width: 80px;
+	margin-right: 10px;
+}
+.station-to-station .panel-title .stations{
+	display: inline-block;
+}
+.station-to-station .panel-title .time{
+	display: inline-block;
+	float: right;
+}
+.station-to-station .panel-body{
+	text-align: left;
+}
+.station-to-station .panel-body span{
+	margin: 0px 4px;
+}
+.train-gray.sm{
+	width: 14px;
+	height: 18px;	
+}
