@@ -29,20 +29,30 @@
         <a id="filter" class="filter pull-right" href="#"><i class="fa fa-bars"></i></a>
         <div class="dropdown" style="display:none">
             <div class="filter-type">
-                <div class="item"><a href="#">全部商区 <i class="fa fa-angle-down"></i></a>
+                <div class="item">
+                    <a id="filter-district" class="active" href="#">
+                        <span id="district-select">全部商区</span><i class="fa fa-angle-down"></i>
+                        <input type="hidden" name="latitude" id="latitude">
+                        <input type="hidden" name="longitude" id="longitude">
+                    </a>
                 </div>
-                <div class="item"><a href="#">全部分类 <i class="fa fa-angle-up"></i></a>
+                <div class="item">
+                    <a id="filter-category" href="#">
+                        <span id="category-select">全部分类</span> <i class="fa fa-angle-down fa-rotate-180"></i>
+                    </a>
                 </div>
             </div>
-            <div class="search level-1">
-                <ul>
-                    <li><a href="#">全部商区</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="search level-2">
-                <ul>
-                </ul>
+            <div id="search-area">
+                <div class="search level-1">
+                    <ul>
+                        <li id="filter-all">
+                        </li>
+                    </ul>
+                </div>
+                <div class="search level-2">
+                    <ul>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -157,16 +167,45 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    $(function() {
-        //过滤菜单切换
-        $('#filter').click(function() {
-            $(this).toggleClass('active');
-            $('.dropdown').fadeToggle('fast');
-        });
+    //过滤菜单切换
+    $('#filter').click(function() {
+        $(this).toggleClass('active');
+        $('.dropdown').fadeToggle('fast');
     });
-    //一级菜单
+    $('#filter-district').click(function() {
+        $(this).toggleClass('active');
+        $(this).find('i').toggleClass('fa-rotate-180');
+        if ($('#filter-category').hasClass('active')) {
+            $('#filter-category').removeClass('active');
+            $('#filter-category').find('i').toggleClass('fa-rotate-180');
+        } else {
+            $('#search-area').fadeIn('fast');
+        }
+        if ($(this).hasClass('active')) {
+            initLayout("district");
+        } else {
+            $('#search-area').fadeOut('fast');
+        }
+    });
+    $('#filter-category').click(function() {
+            $(this).toggleClass('active');
+            $(this).find('i').toggleClass('fa-rotate-180');
+            if ($('#filter-district').hasClass('active')) {
+                $('#filter-district').removeClass('active');
+                $('#filter-district').find('i').toggleClass('fa-rotate-180');
+            } else {
+                $('#search-area').fadeIn('fast');
+            }
+            if ($(this).hasClass('active')) {
+                initLayout("category");
+            } else {
+                $('#search-area').fadeOut('fast');
+            }
+        })
+        //一级菜单
     var cities = initDistirctData();
-    initLayout();
+    var categories = initCategoryData();
+    initLayout("district");
     //读取商区数据
     function initDistirctData() {
             var cities = {};
@@ -181,31 +220,113 @@
             })
             return cities;
         }
-        //加载行政区列表
-    function initLayout() {
-            var html = "";
-            $.each(cities.districts, function(index, val) {
-                html += '<li><a href="javascript:loadArea(\'' + val.district_name + '\')">' + val.district_name + '</a></li>'
-            });
-            $('.level-1 ul').append(html);
-            $('.level-1 ul li').not(':first').bind('click', function() {
-                $(this).addClass('active');
-                $(this).siblings().removeClass('active');
+        //读取分类数据
+    function initCategoryData() {
+            var categories = {};
+            $.ajax({
+                url: 'js/category.json',
+                type: 'GET',
+                dataType: 'json',
+                async: false,
+                success: function(data) {
+                    categories = data;
+                }
             })
+            return categories;
+        }
+        //加载过滤列表
+    function initLayout(type) {
+            var html = "";
+            if (type === "district") {
+                $('#filter-all').html('<a data-link="area" href="#">全部商区</a>');
+                $('#filter-all a').bind('click',liClick)
+                $.each(cities.districts, function(index, val) {
+                    html += '<li><a href="javascript:loadArea(\'' + val.district_name + '\')">' + val.district_name + '</a></li>'
+                });
+                $('.level-1 ul li').not(':first').remove();
+                $('.level-1 ul').append(html);
+                $('.level-1 ul li').not(':first').bind('click', function() {
+                    $(this).addClass('active');
+                    $(this).siblings().removeClass('active');
+                })
+            } else if (type === "category") {
+                $('#filter-all').html('<a data-link="category" href="#">全部分类</a>');
+                $('#filter-all a').bind('click',liClick)
+                $.each(categories, function(index, val) {
+                    if (val.subcategories.length > 0) {
+                        html += '<li><a href="javascript:loadSubcategory(\'' + val.category_name + '\')">' + val.category_name + '</a></li>'
+                    } else {
+                        html += '<li><a data-link="category" href="#">' + val.category_name + '</a></li>'
+                    }
+                });
+                $('.level-1 ul li').not(':first').remove();
+                $('.level-1 ul').append(html);
+                $('.level-1 ul li').not(':first').bind('click', function() {
+                    $(this).addClass('active');
+                    $(this).siblings().removeClass('active');
+                })
+            }
         }
         //加载商区
     function loadArea(districtName) {
+            var html = ""
+            $.each(cities.districts, function(index, val) {
+                if (val.district_name == districtName) {
+                    $.each(val.neighborhoods, function(index, val) {
+                        html += '<li><a data-link="area" data-coordinate="' + val.coordinate + '" href="#">' + val.name + '</a></li>'
+                    });
+                    $('.level-2 ul').empty();
+                    $('.level-2 ul').append(html);
+                    $('.level-2 ul li a').bind('click',liClick);
+                    return false;
+                }
+            });
+        }
+        //加载子分类
+    function loadSubcategory(categoryName) {
         var html = ""
-        $.each(cities.districts, function(index, val) {
-            if (val.district_name == districtName) {
-                $.each(val.neighborhoods, function(index, val) {
-                    html += '<li><a href="javascript:loadGroupon(\'' + val + '\')">' + val + '</a></li>'
+        $.each(categories, function(index, val) {
+            if (val.category_name == categoryName) {
+                $.each(val.subcategories, function(index, val) {
+                    html += '<li><a data-link="category" href="#">' + val + '</a></li>'
                 });
                 $('.level-2 ul').empty();
                 $('.level-2 ul').append(html);
+                $('.level-2 ul li a').bind('click',liClick);
                 return false;
             }
         });
+    }
+    //点击事件
+    function liClick(e){
+        e.preventDefault();
+        $('#latitude').val('');
+        $('#longitude').val('');
+        var link=$(this).data('link');
+        if(link=="area"){
+            var coordinate=$(this).data('coordinate');
+            $('#district-select').html($(this).text());
+            if(coordinate){
+                var latitude=coordinate.split(",")[0];
+                var longitude=coordinate.split(",")[1];
+                $('#latitude').val(latitude);
+                $('#longitude').val(longitude);
+            }
+        }else if(link=="category"){
+            $('#category-select').html($(this).text());
+        }
+        resetLayout();
+        loadGroupon();        
+    }
+    //重置界面
+    function resetLayout(){
+        $('#search-area').fadeOut();
+        $('#filter-district i,#filter-category i').addClass('fa-rotate-180');
+        $('#filter-district,#filter-category').removeClass('active');
+    }
+    //读取团购
+    function loadGroupon(){
+
     }
     </script>
 </body>
