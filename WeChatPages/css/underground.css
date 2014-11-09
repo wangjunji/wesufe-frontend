@@ -1,0 +1,21 @@
+body{
+    padding-bottom: 40px;
+}
+.footer.fixed-bottom{
+    margin: 0px;
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index: 2;
+}
+.metro-gray{
+	background-image: url('../img/transportation/metro-gray.png');
+	display: inline-block;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	vertical-align: bottom;
+}
+.underground img{
+	margin: 0 auto;
+}

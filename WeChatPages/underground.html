@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/underground.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#"> <i class="metro-gray"></i>
+            地铁1号线首末班车时刻表
+        </a>
+    </div>
+    <div class="inner-page underground">
+        <div class="container">
+            <a href="img/transportation/underground/line1.png" class="fancybox">
+                <img src="img/transportation/underground/line1.png" alt="地铁1号线首末班车时刻表" class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <div class="footer fixed-bottom">2014 &copy; WeSufe</div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+    $('.fancybox').fancybox({
+        beforeShow: function() {
+            var alt = this.element.find('img').attr('alt');
+
+            this.inner.find('img').attr('alt', alt);
+
+            this.title = alt;
+        },
+        padding: 0
+    });
+    </script>
+</body>
+
+</html>
