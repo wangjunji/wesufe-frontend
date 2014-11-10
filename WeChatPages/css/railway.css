@@ -40,13 +40,20 @@ table thead tr th{
 	line-height: 22px;
 	text-decoration: none;
 }
+.station-to-station .panel-title .row>div{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.station-to-station .panel-title span{
+	margin-bottom: 4px;
+}
 .station-to-station .panel-title .train-type{
 	margin-right: 6px;
 	padding: 3px 6px;
 }
 .station-to-station .panel-title .train-no{
 	display: inline-block;
-	width: 80px;
+	width: 50px;
 	margin-right: 10px;
 }
 .station-to-station .panel-title .stations{
@@ -54,7 +61,6 @@ table thead tr th{
 }
 .station-to-station .panel-title .time{
 	display: inline-block;
-	float: right;
 }
 .station-to-station .panel-body{
 	text-align: left;

@@ -190,6 +190,11 @@ a {
     text-align: left;
     margin-bottom: 4px;
 }
+.media-body .sold-count{
+    text-align:right;
+    color:#999;
+    margin:0;
+}
 .media-body h5 {
     text-align: left;
     font-weight: 700;
