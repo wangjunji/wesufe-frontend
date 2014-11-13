@@ -1,0 +1,48 @@
+body {
+	padding-top: 50px;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+.footer.fixed-bottom {
+    margin: 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+#go-back,#go-back:hover{
+	line-height: 50px;
+	font-size: 14px;
+	margin-right: 20px;
+	color: #777;
+	text-decoration: none;
+}
+.transit .wrapper{
+	position:relative;
+}
+#result{
+	position: absolute;
+	overflow: auto;
+	padding:0 10px;
+	padding-bottom: 100px;
+	width: 100%;
+	height: 100%;
+	top:0;
+	right: 0;
+	z-index: 2;
+}
+#map {
+	position: absolute;
+	width: 100%;
+	top:0;
+	right: -100%;
+	z-index: 3;
+	opacity: 0;
+	-webkit-transition: all .7s;
+	-o-transition: all .7s;
+	transition: all .7s;
+}
+#map.in{
+	right:0;
+	opacity: 1;
+}

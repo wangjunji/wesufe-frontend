@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/transit.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#"> <i class="fa fa-bus"></i>
+            公交线路查询
+        </a>
+        <a id="go-back" href="#" class="pull-right" style="display:none"><i class="fa fa-reply"></i> 查看其他线路</a>
+    </div>
+    <div class="inner-page transit">
+        <div class="wrapper">
+            <div id="result"></div>
+            <div id="map">
+            </div>
+        </div>
+    </div>
+    <div class="footer fixed-bottom">2014 &copy; WeSufe</div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=mDdVGf8yNp1pqb1KXixNlKp5"></script>
+    <script type="text/javascript">
+    $(function(){
+        var win_h=$(window).height();
+        $('#map').height(win_h-90);
+        $('.wrapper').height(win_h);
+        $('#go-back').click(function(){
+            $('#map').removeClass('in');
+            $('#go-back').hide();
+        });
+    })
+    // 百度地图API功能
+    var map = new BMap.Map("map");
+    map.centerAndZoom(new BMap.Point(121.521191, 31.303805), 10);
+    map.enableScrollWheelZoom();
+    var transit = new BMap.TransitRoute(map, {
+        renderOptions: {
+            map: map,
+            panel: 'result'
+        },
+        onSearchComplete:function(result){
+            $('.anchorBL').remove();
+        },
+        onResultsHtmlSet:function(container){
+            $(container).find('h1').remove();
+            $(container).find('>div').last().remove();
+              $(container).find('table').css('width','100%');
+            $(container).find('>div:first,>div:last').css('font-size','16px');
+            $(container).find('div').css({'text-align':'left','font-family':'Microsoft YaHei'});
+            $(container).find('tr').bind('click',function(){
+                $('#map').addClass('in');
+                $('#go-back').show();
+            });
+        }
+    });
+    var from=getQueryStringByName('from');
+    var to=getQueryStringByName('to');
+    transit.search(from, to);
+    function getQueryStringByName(name){
+
+     var result = location.search.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
+
+     if(result == null || result.length < 1){
+
+         return "";
+
+     }
+
+     return result[1];
+}
+    </script>
+</body>
+
+</html>
