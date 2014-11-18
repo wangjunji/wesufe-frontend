@@ -112,36 +112,50 @@ body{
   }
 }
 /* logos */
-.htmw, .htmw td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_html_howtomakeawebsite_stage01.png");
+tbody tr:nth-child(15n+1) ,tbody tr:nth-child(15n+1) td:first-child{
+  background-image:url("../img/exam/1.png");
 }
-.html, .html td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/HTML_Forms.png");
+tbody tr:nth-child(15n+2) ,tbody tr:nth-child(15n+2) td:first-child{
+  background-image:url("../img/exam/2.png");
 }
-.css, .css td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_DD_CSS_Stage6.png");
+tbody tr:nth-child(15n+3) ,tbody tr:nth-child(15n+3) td:first-child{
+  background-image:url("../img/exam/3.png");
 }
-.programming, .programming td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_JavaScript_jQueryBasics_Stage5.png");
+tbody tr:nth-child(15n+4) ,tbody tr:nth-child(15n+4) td:first-child{
+  background-image:url("../img/exam/4.png");
 }
-.js, .js td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_JavaScript_jQueryBasics_Stage3.png");
+tbody tr:nth-child(15n+5) ,tbody tr:nth-child(15n+5) td:first-child{
+  background-image:url("../img/exam/5.png");
 }
-.jquery, .jquery td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_JavaScript_jQueryBasics_Stage1.png");
+tbody tr:nth-child(15n+6) ,tbody tr:nth-child(15n+6) td:first-child{
+  background-image:url("../img/exam/6.png");
 }
-.accessibility, .accessibility td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_JavaScript_jQueryBasics_Stage4.png");
+tbody tr:nth-child(15n+7) ,tbody tr:nth-child(15n+7) td:first-child{
+  background-image:url("../img/exam/7.png");
 }
-.optimization, .optimization td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_chromeDev_Stage1.png");
+tbody tr:nth-child(15n+8) ,tbody tr:nth-child(15n+8) td:first-child{
+  background-image:url("../img/exam/8.png");
 }
-.console, .console td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_JavaScript_jQueryBasics_Stage2.png");
+tbody tr:nth-child(15n+9) ,tbody tr:nth-child(15n+9) td:first-child{
+  background-image:url("../img/exam/9.png");
 }
-.git, .git td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_DD_Git_Stage3.png");
+tbody tr:nth-child(15n+10) ,tbody tr:nth-child(15n+10) td:first-child{
+  background-image:url("../img/exam/10.png");
 }
-.sass, .sass td:first-child{
-  background-image:url("https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_DD_SASS_Stage1.png");
+tbody tr:nth-child(15n+11) ,tbody tr:nth-child(15n+11) td:first-child{
+  background-image:url("../img/exam/11.png");
 }
+tbody tr:nth-child(15n+12) ,tbody tr:nth-child(15n+12) td:first-child{
+  background-image:url("../img/exam/12.png");
+}
+tbody tr:nth-child(15n+13) ,tbody tr:nth-child(15n+13) td:first-child{
+  background-image:url("../img/exam/13.png");
+}
+tbody tr:nth-child(15n+14) ,tbody tr:nth-child(15n+14) td:first-child{
+  background-image:url("../img/exam/14.png");
+}
+tbody tr:nth-child(15n+15) ,tbody tr:nth-child(15n+15) td:first-child{
+  background-image:url("../img/exam/15.png");
+}
+
+
