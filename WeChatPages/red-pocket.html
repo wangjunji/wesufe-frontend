@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/redpocket.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="card transition">
+        <h2 class="transition">
+            恭喜你获得一个红包
+            <br/>
+            <small>每日可抽取一次哦~</small>
+        </h2>
+        <div class="cta-container transition"><a href="#" class="cta">试一下手气</a>
+        </div>
+        <div class="card_circle transition"></div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+    $('.cta').click(function() {
+        $('.card').addClass('open');
+        $('.card>h2').html('恭喜你获得0.01元');
+    })
+    </script>
+</body>
+</html>

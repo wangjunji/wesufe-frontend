@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    html,
+    body {
+        background: #FDF6E3;
+        text-align: center;
+        margin: 20px 0;
+    }
+    h1 {
+        font-family: 'Gafata', 'Lucida Grande', Tahoma, Verdana, sans-serif;
+        font-size: 2.1875rem;
+        font-weight: 100;
+        color: #A75F63;
+        text-shadow: 0 1px 1px white;
+    }
+    .loading-wrapper {
+        font-family: "Verdana";
+        background: #fff;
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .inner-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0 auto;
+        width: 200px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+    .loading-wrapper .logo {
+        font-size: 24px;
+        font-weight: 400;
+        color: #777;
+        text-shadow: 0px 1px 4px #ccc;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        -webkit-animation: logo .9s infinite alternate;
+        -webkit-animation-delay: 0s;
+    }
+    .bubbles {
+        height: 20px;
+    }
+    .bubbles span {
+        color: #fff;
+        font-family: "Verdana";
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 10px;
+        margin: 0 auto;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        /*-webkit-animation: bubbly .9s infinite alternate;*/
+    }
+    /* Bubbles */
+    
+    #bubble1 {
+        background: #f69c9b;
+        -webkit-animation: bubbly1 .9s infinite alternate;
+        -webkit-animation-delay: 0s;
+    }
+    #bubble2 {
+        background: #ffed81;
+        -webkit-animation: bubbly2 .9s infinite alternate;
+        -webkit-animation-delay: .2s;
+    }
+    #bubble3 {
+        background: #d5e286;
+        -webkit-animation: bubbly3 .9s infinite alternate;
+        -webkit-animation-delay: .4s;
+    }
+    #bubble4 {
+        background: #6bbce9;
+        -webkit-animation: bubbly4 .9s infinite alternate;
+        -webkit-animation-delay: .6s;
+    }
+    #bubble5 {
+        background: #A49BCA;
+        -webkit-animation: bubbly5 .9s infinite alternate;
+        -webkit-animation-delay: .8s;
+    }
+    @-webkit-keyframes bubbly1 {
+        0% {
+            width: 10px;
+            height: 10px;
+            opacity: 0.3;
+            -webkit-transform: translateY(0);
+        }
+        100% {
+            width: 24px;
+            height: 24px;
+            opacity: 1;
+            -webkit-transform: translateY(-100px);
+        }
+    }
+    @-webkit-keyframes bubbly2 {
+        0% {
+            width: 10px;
+            height: 10px;
+            opacity: 0.3;
+            -webkit-transform: translateY(0);
+        }
+        100% {
+            width: 22px;
+            height: 22px;
+            opacity: 1;
+            -webkit-transform: translateY(-100px);
+        }
+    }
+    @-webkit-keyframes bubbly3 {
+        0% {
+            width: 10px;
+            height: 10px;
+            opacity: 0.3;
+            -webkit-transform: translateY(0);
+        }
+        100% {
+            width: 20px;
+            height: 20px;
+            opacity: 1;
+            -webkit-transform: translateY(-100px);
+        }
+    }
+    @-webkit-keyframes bubbly4 {
+        0% {
+            width: 10px;
+            height: 10px;
+            opacity: 0.3;
+            -webkit-transform: translateY(0);
+        }
+        100% {
+            width: 18px;
+            height: 18px;
+            opacity: 1;
+            -webkit-transform: translateY(-100px);
+        }
+    }
+    @-webkit-keyframes bubbly5 {
+        0% {
+            width: 10px;
+            height: 10px;
+            opacity: 0.3;
+            -webkit-transform: translateY(0);
+        }
+        100% {
+            width: 16px;
+            height: 16px;
+            opacity: 1;
+            -webkit-transform: translateY(-100px);
+        }
+    }
+    @-webkit-keyframes logo {
+        0% {
+            opacity: 0.3;
+            -webkit-transform: translateY(0);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(-4px);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="loading-wrapper">
+        <div class="inner-wrapper">
+            <div class="logo">WeSufe</div>
+            <div class="bubbles">
+                <span id="bubble1"></span>
+                <span id="bubble2"></span>
+                <span id="bubble3"></span>
+                <span id="bubble4"></span>
+                <span id="bubble5"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
