@@ -1,0 +1,16 @@
+#loading-wrapper{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	z-index:9999;
+	background-color: #fff;
+}
+#loading-wrapper canvas{
+	position: absolute;
+	top:40%;
+	left:50%;
+	margin-left: -50px;
+	margin-top: -50px;
+}
