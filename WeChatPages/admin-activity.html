@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="plugins/dataTables/css/dataTables.bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/tag-basic-style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WeSufe后台管理系统</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">用户管理</a>
+                </li>
+                <li class="active"><a href="#">活动讲座</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">柯鸿鹏</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">操作 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa fa-user"></i> 创建用户</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i> 退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    <div class="inner-page admin-activity">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="page-header text-left">
+                        活动讲座
+                    </h3>
+                    <div class="toolbar pull-right">
+                        <button class="btn btn-success">通过</button>
+                        <button class="btn btn-danger">拒绝</button>
+                    </div>
+                    <table id="act-table" class="table table-striped table-bordered table-hover" id="gpa-table">
+                        <thead>
+                            <tr>
+                                <th nowrap></th>
+                                <th nowrap>活动/讲座名称</th>
+                                <th nowrap>举办部门/主讲人</th>
+                                <th nowrap>地点</th>
+                                <th nowrap>时间</th>
+                                <th nowrap>标签</th>
+                                <th nowrap>描述</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" data-id="">
+                                </td>
+                                <td>2013-2014 2</td>
+                                <td>数据挖掘</td>
+                                <td>专业选修课</td>
+                                <td>2</td>
+                                <td>90</td>
+                                <td>晏海林，1957年9月生，复旦大学艺术教育中心副教授。长期在复旦大学、上海大学、上海财经大学、上海东方文化学院、上海老年大学以及日本大东文化大学、韩国外国语大学校等院校任书法理论与实践课程讲席。著有《审美新空间•书法巡美》、《中国传统艺术•书法》等。书法作品多次入选国内外各种展览，并被有关机构及个人爱好者收藏。</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>2013-2014 2</td>
+                                <td>财务管理</td>
+                                <td>学科共同课</td>
+                                <td>3</td>
+                                <td>88</td>
+                                <td>3.7</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>2013-2014 2</td>
+                                <td>计算机网络</td>
+                                <td>专业核心课</td>
+                                <td>4</td>
+                                <td>85</td>
+                                <td>3.7</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>2013-2014 2</td>
+                                <td>会计学</td>
+                                <td>学科共同课</td>
+                                <td>3</td>
+                                <td>85</td>
+                                <td>3.7</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>2013-2014 2</td>
+                                <td>综合设计实验</td>
+                                <td>专业方向课</td>
+                                <td>2</td>
+                                <td>94</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="page-header text-left">
+                        活动讲座发布
+                    </h3>
+                    <form action="" method="POST" role="form">
+                        <div class="form-group">
+                            <label for="">发布类型</label>
+                            <div>
+                                活动 <input type="radio" name="type" checked>&nbsp;
+                                讲座 <input type="radio" name="type">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="">活动/讲座名称</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">活动/讲座地点</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">举办部门/主讲人</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">活动/讲座时间</label>
+                            <div class="input-group date" id="datetimepicker">
+                                <input id="time" type="text" class="form-control" data-date-format="YYYY年MM月DD日 hh:mm">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">描述</label>
+                            <textarea id="intro" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">活动/讲座标签(以空格分隔)</label>
+                            <div data-tags-input-name="tag" data-tag-char="<i class='fa fa-tag'></i>" id="tagBox"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发布</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugins/dataTables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/zh-cn.js"></script>
+    <script src="js/tagging.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#act-table').dataTable({
+            "paging": true,
+            "searching": false,
+            "info": false,
+            "language": {
+                search: "<i class='fa fa-search'></i> 搜索:",
+                zeroRecords:"没有记录",
+                lengthMenu: "每页显示 _MENU_ 条记录",
+                paginate: {
+                    first: "第一页",
+                    previous: "上一页",
+                    next: "下一页",
+                    last: "最后页"
+                },
+            }
+        });
+        $('#tagBox').tagging();
+        var dt = $('#datetimepicker').datetimepicker({
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-arrow-up",
+                down: "fa fa-arrow-down"
+            },
+            language: "zh-cn"
+        });
+    })
+    </script>
+</body>
+
+</html>

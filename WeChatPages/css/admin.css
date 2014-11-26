@@ -1,0 +1,19 @@
+#user-table_wrapper,#act-table_wrapper{
+	text-align: left;
+}
+.admin-user h3 small{
+	font-size: 14px;
+	margin-left:6px;
+}
+.admin-user h3{
+	text-align: left;
+}
+.admin-user .feedback{
+	text-align: left;
+}
+.admin-activity{
+	text-align: left;
+}
+#act-table th:last-child{
+	width: 40%;
+}
