@@ -1,19 +1,41 @@
-#user-table_wrapper,#act-table_wrapper{
+#user-table_wrapper, #act-table_wrapper {
+    text-align: left;
+}
+.admin-user h3 small {
+    font-size: 14px;
+    margin-left: 6px;
+}
+.admin-user h3 {
+    text-align: left;
+}
+.admin-user .feedback {
+    text-align: left;
+}
+.admin-activity {
+    text-align: left;
+}
+#act-table th:last-child {
+    width: 40%;
+}
+#statistic-table {
+	margin-top: 0px !important;
+    text-align: center;
+    font-size: 12px;
+}
+#statistic-table th {
+    text-align: center;
+}
+.admin-statistic #datetimepicker{
+	width: 200px;
+	float: right;
+}
+.admin-statistic .panel ul{
+	list-style: none;
 	text-align: left;
 }
-.admin-user h3 small{
-	font-size: 14px;
-	margin-left:6px;
+.admin-statistic .panel ul li span{
+	float: right;
 }
-.admin-user h3{
-	text-align: left;
-}
-.admin-user .feedback{
-	text-align: left;
-}
-.admin-activity{
-	text-align: left;
-}
-#act-table th:last-child{
-	width: 40%;
+#line-chart{
+	margin: 0 120px;
 }
