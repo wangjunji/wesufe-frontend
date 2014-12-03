@@ -1,0 +1,28 @@
+body {
+    padding:50px 20px 40px 20px;
+    background: url("../img/navigation/community-bg.jpg") no-repeat;
+    background-size: cover;
+}
+.footer.fixed-bottom {
+    margin: 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.community .item{
+	padding: 20px 10px 0 10px;
+	text-align: center;
+}
+.community .item a{
+	text-decoration: none;
+	color: #444;
+	font-size: 16px;
+}
+.community .item a img{
+	margin: 0 auto;
+	margin-bottom: 4px;
+}
+.community .col-xs-4{
+	padding: 0;
+}
