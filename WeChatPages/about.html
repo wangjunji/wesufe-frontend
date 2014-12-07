@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/about.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="inner-page aboutus">
+        <div class="jumbotron">
+            <img src="img/about/jumbotron.jpg">
+            <div class="mock-up"></div>
+            <div class="container">
+                <h1>WeSufe</h1>
+                <p>以极致的用户体验为用户带来最大价值</p>
+            </div>
+        </div>
+        <div class="section team-intro">
+            <h2 class="title">团队介绍</h2>
+            <p>
+                团队是一支拥有多年网站建设经验的团队，团队成员具有多年大型门户网站建设的经验。同时，123互联程序员团队也是一支年轻、富有朝气、才华横溢而又努力上进的队伍，在不断吸收国外最先进的技术和经验的同时，不断摸索更适合中国互联网发展的解决方案，始终走在建站行业技术的最前列。网站分析师网站分析是一个网站能否取得成功的关键要素，网站分析师利用各种分析工具，对企业网站做全方位剖析，根据企业的需求和实际情况，量身定做最适合企业的商务网站。
+            </p>
+        </div>
+        <div class="section team-member">
+            <h2 class="title">团队成员</h2>
+            <div class="row">
+                <div class="col-xs-6 col-md-2 col-md-offset-2">
+                    <div class="portrait">
+                        <img src="img/about/khp.png" class="avatar">
+                    </div>
+                    <div class="name">柯鸿鹏</div>
+                    <div class="position">首席研发工程师</div>
+                </div>
+                <div class="col-xs-6 col-md-2 col-md-offset-4">
+                    <div class="portrait">
+                        <img src="img/about/wjj.png" class="avatar">
+                    </div>
+                    <div class="name">王君吉</div>
+                    <div class="position">首席前端工程师</div>
+                </div>
+            </div>
+        </div>
+        <div class="section join">
+            <h2 class="title">加入我们</h2>
+            <h5>发送简历至join@wesufe.cn</h5>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="img-responsive" src="img/about/programmer.png">
+                </div>
+                <div class="col-xs-8">
+                    <p>
+                        <strong>程序员</strong><br>
+                        熟悉HTML5+CSS3+JQuery
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <p class="text-right"><strong>设计师</strong>
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                    <img class="img-responsive" src="img/about/designer.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="img-responsive" src="img/about/writer.png">
+                </div>
+                <div class="col-xs-8">
+                    <p><strong>文案</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <p class="text-right"><strong>市场营销</strong>
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                    <img class="img-responsive" src="img/about/marketing.png">
+                </div>
+            </div>
+        </div>
+        <div class="section contact">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="image feedback"></div>
+                    <h4>意见反馈</h4>
+                </div>
+                <div class="col-xs-4">
+                    <div class="image cooperation"></div>
+                    <h4>合作推广</h4>
+                </div>
+                <div class="col-xs-4">
+                    <div class="image outsource"></div>
+                    <h4>项目外包</h4>
+                </div>
+            </div>
+            <div class="info">
+                <p>请联系</p>
+                <p><i class="fa fa-envelope"></i> contact@wesufe.cn</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $(window).scroll(function() {
+            var s = $(window).scrollTop();
+            if (s > 600 && s<1200) {
+                $('.team-member .portrait').addClass('hover');
+                $('.contact .image').removeClass('hover');
+            } else if(s>1200){
+                $('.contact .image').addClass('hover');
+            }
+        });
+    })
+    </script>
+</body>
+
+</html>
