@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section active">
+            <div id="box1" class="box">
+                <img src="img/clock.png" />
+                <p><strong>3000</strong>多个小时程序猿哥哥的倾力研发</p>
+            </div>
+            <div id="box2" class="box">
+                <img id="img2" src="img/tailor.png" />
+                <p><strong>30</strong>多个功能模块的精打细磨</p>
+            </div>
+            <div id="box3" class="box">
+                <img src="img/settings.png" />
+                <p><strong>50</strong>多个迭代版本的反复内测</p>
+            </div>
+            <div id="motto1" class="motto">
+                <p>精益求精&nbsp;&nbsp;只因为你</p>
+            </div>
+            <div id="nav1" class="nav"></div>
+        </div>
+        <div id="section2" class="section">
+            <div id="box4" class="box">
+                <img id="img4" src="img/search.png">
+                <h4>功能齐全</h4>
+                <p>学习 | 娱乐 | 生活</p>
+                <h5><strong>实用信息全搜罗</strong></h5>
+            </div>
+            <div id="box5" class="box">
+                <img id="img5" src="img/responsive_3.png">
+                <h4>界面友好</h4>
+                <p>IOS | 安卓 | 平板</p>
+                <h5><strong>大屏小屏全适用</strong></h5>
+            </div>
+            <div id="motto2" class="motto" >
+                <p>体验完美&nbsp;&nbsp;全面升级</p>
+            </div>
+            <div id="nav2" class="nav"></div>
+        </div>
+        <div id="section3" class="section">
+            <div id="box6" class="box">
+                <img id="img6" src="img/touch.png">
+                <h4>考试、课表、成绩一键查看</h4>
+                <p>教管Say Goodbye</p>
+            </div>
+            <div id="box7" class="box">
+                <img id="img7" src="img/job.png">
+                <h4>寻找实习哪家强?</h4>
+                <p>找WeSufe来帮忙</p>
+            </div>
+            <div id="box8" class="box">
+                <img id="img8" src="img/lecture.png">
+                <h4>活动、讲座每周更新</h4>
+                <p>比新更新，比全更全</p>
+            </div>
+            <div id="nav3" class="nav"></div>
+        </div>
+        <div id="section4" class="section">
+            <div id="box9" class="box">
+                <img id="img9" src="img/groupon.png">
+                <h4>团购</h4>
+                <p>美食 | 电影 | KTV</p>
+                <h5>来约吗？</h5>
+            </div>
+            <div id="box10" class="box">
+                <img id="img10" src="img/transportation.png">
+                <h4>出行</h4>
+                <p>公交 | 地铁 | 火车 | 飞机</p>
+                <h5>都被我承包了</h5>
+            </div>
+            <div id="box11" class="box">
+                <img id="img11" src="img/love.png">
+                <h4>表白墙</h4>
+                <p>萌妹子 | 女汉子 | 大叔 | 暖男</p>
+                <h5>总有一款适合你</h5>
+            </div>
+            <div id="nav4" class="nav"></div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            'verticalCentered': false,
+            'css3': true,
+            'touchSensitivity': 40,
+            'sectionsColor': ['#fff', '#fff', '#fff', '#fff'],
+            'navigation': false,
+            'navigationPosition': 'right',
+            afterRender: function() {
+                //initialize
+                $('#section1>*').hide();
+                $('#section2 #box4>*,#section2 #box5>*,#motto2,#nav2').hide();
+                $('#section3 #box6>*,#section3 #box7>*,#section3 #box8>*,#nav3').hide();
+                $('#section4 #box9>*,#section4 #box10>*,#section4 #box11>*,#nav4').hide();
+                //section1 effect
+                //section1 effect
+                $('#section1>*').each(function(i) {
+                    var $this = $(this);
+                    setTimeout(function() {
+                        $this.show();
+                        $this.addClass('animated fadeInDown')
+                    }, i * 1000);
+                })
+            },
+            afterLoad: function(anchorLink, index) {
+                if (index == 2) {
+                    var objArr1=$('#section2 #box4>*');
+                    var objArr2=$('#section2 #box5>*');
+                    var delay=800;
+                    animate(objArr1,0,0,"animated bounceIn");
+                    animate(objArr1,1,1*delay,"animated fadeInRight");
+                    animate(objArr1,2,2*delay,"animated fadeInRight");
+                    animate(objArr1,3,3*delay,"animated fadeInRight");
+                    animate(objArr2,0,4*delay,"animated bounceIn");
+                    animate(objArr2,1,5*delay,"animated fadeInLeft");
+                    animate(objArr2,2,6*delay,"animated fadeInLeft");
+                    animate(objArr2,3,7*delay,"animated fadeInLeft");                    
+                    animate($('#motto2'),0,8*delay,"animated zoomIn");
+                    animate($('#nav2'),0,9*delay,"animated fadeInDown");
+                }
+                if (index == 3) {
+                    var objArr1=$('#section3 #box6>*');
+                    var objArr2=$('#section3 #box7>*');
+                    var objArr3=$('#section3 #box8>*');
+                    var delay=800;
+                    animate(objArr1,0,0,"animated bounceIn");
+                    animate(objArr1,1,1*delay,"animated flipInX");
+                    animate(objArr1,2,2*delay,"animated fadeInLeft");
+                    animate(objArr2,0,3*delay,"animated bounceIn");
+                    animate(objArr2,1,4*delay,"animated flipInX");
+                    animate(objArr2,2,5*delay,"animated fadeInRight");
+                    animate(objArr3,0,6*delay,"animated bounceIn");
+                    animate(objArr3,1,7*delay,"animated flipInX");
+                    animate(objArr3,2,8*delay,"animated fadeInLeft");
+                    animate($('#nav3'),0,9*delay,"animated fadeInDown");
+                }
+                if (index == 4) {
+                    var objArr1=$('#section4 #box9>*');
+                    var objArr2=$('#section4 #box10>*');
+                    var objArr3=$('#section4 #box11>*');
+                    var delay=800;
+                    animate(objArr1,0,0,"animated bounceIn");
+                    animate(objArr1,1,1*delay,"animated fadeIn");
+                    animate(objArr1,2,2*delay,"animated fadeInLeft");
+                    animate(objArr1,3,3*delay,"animated bounceInDown");
+                    animate(objArr2,0,4*delay,"animated bounceIn");
+                    animate(objArr2,1,5*delay,"animated fadeIn");
+                    animate(objArr2,2,6*delay,"animated fadeInRight");
+                    animate(objArr2,3,7*delay,"animated bounceInDown");
+                    animate(objArr3,0,8*delay,"animated bounceIn");
+                    animate(objArr3,1,9*delay,"animated fadeIn");
+                    animate(objArr3,2,10*delay,"animated fadeInLeft");
+                    animate(objArr3,3,11*delay,"animated bounceInDown");
+                    animate($('#nav4'),0,12*delay,"animated fadeInDown");
+                }
+            }
+        });
+        $('.nav').click(function(event) {
+            $.fn.fullpage.moveSectionDown();
+        });
+    });
+    function animate(objArr,i,delay,animateClass){
+        setTimeout(function(){
+            objArr.eq(i).show();
+            objArr.eq(i).addClass(animateClass);
+        },delay);
+    }
+    </script>
+</body>
+
+</html>
