@@ -35,7 +35,7 @@ body{
     top:5%;
     left: 50%;
     width: 300px;
-    margin-left: -120px;
+    margin-left: -100px;
 }
 #section1 #box1 img{
     margin-left: 120px;
@@ -391,4 +391,38 @@ body{
 }
 #section4 #nav4{
     background-color: #fc1c00;
+}
+#section5{
+    padding: 60px 0;
+}
+#section5 #myCanvasContainer{
+    width: 300px;
+    margin: 0 auto;
+}
+#section5 #motto5{
+    position: absolute;
+    top:70%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+}
+#section5 #motto5 h2{
+    text-align: center;
+    margin:5px;
+}
+#section5 #motto5 p{
+    text-align: center;
+    font-size: 16px;
+}
+#section5 #motto5 p .word1{
+    color: #6aba00;
+}
+#section5 #motto5 p .word2{
+    color: #1dc0c2;
+}
+#section5 #motto5 p .word3{
+    color: #c14e98;
+}
+#section5 #nav5{
+    background-color: #c14e98;
 }
