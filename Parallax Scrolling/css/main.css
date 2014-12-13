@@ -16,7 +16,7 @@ body{
     width: 300px;
     left: 50%;
     margin-left: -150px;
-    font-size:18px;
+    font-size: 20px;
     font-weight: 400;
     color:#51b6fa;
 }
@@ -27,10 +27,17 @@ body{
     height: 30px;
     left: 50%;
     margin-left: -15px;
-    border-radius: 50%;
     background-color: #51b6fa;
-    background-image: url('../img/arrow-down.png')
+    background-image: url('../img/arrow-up.png')
 }
+.section .decoration{
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+}
+/****************************/
 #section1 #box1{
     top:5%;
     left: 50%;
@@ -45,6 +52,11 @@ body{
 #section1 #box1 p strong{
     font-weight: 700;
     color:#fdb13a;
+}
+#section1 #box1 #decoration1{
+    top:25px;
+    left:30px;
+    background-image: url('../img/decoration1.png')
 }
 #section1 #box2{
     top:30%;
@@ -61,6 +73,11 @@ body{
     font-weight: 700;
     color:#8bce66;
 }
+#section1 #box2 #decoration2{
+    top:-10px;
+    right:100px;
+    background-image: url('../img/decoration2.png')
+}
 #section1 #box3{
     top:55%;
     left: 50%;
@@ -76,11 +93,17 @@ body{
     font-weight: 700;
     color:#42a2e7;
 }
+#section1 #box3 #decoration3{
+    top:-10px;
+    left:30px;
+    background-image: url('../img/decoration3.png')
+}
+/****************************/
 #section2 .box{
     height: 30%;
 }
 #section2 #box4{
-    top:15%;
+    top:5%;
     left: 50%;
     width: 300px;
     margin-left: -140px;
@@ -119,8 +142,22 @@ body{
     font-size: 15px;
     line-height: 28px;
 }
+#section2 #box4 #decoration4{
+    bottom: -10px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background-image: url('../img/decoration4.png');
+}
+#section2 #box4 #decoration5{
+    bottom: -50px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/decoration5.png');
+}
 #section2 #box5{
-    top:50%;
+    top:45%;
     left: 50%;
     width: 300px;
     margin-left: -140px;
@@ -134,14 +171,14 @@ body{
 }
 #section2 #box5 h4{
     position: absolute;
-    right: 120px;
+    right: 125px;
     top: 12px;
     margin: 0px;
     color: #3daac1;
 }
 #section2 #box5 p{
     position: absolute;
-    right: 120px;
+    right: 125px;
     top: 36px;
     margin: 0px;
     color: #666;
@@ -150,7 +187,7 @@ body{
 }
 #section2 #box5 h5{
     position: absolute;
-    right: 120px;
+    right: 125px;
     top: 60px;
     margin: 0px;
     color: #666;
@@ -161,12 +198,27 @@ body{
 #section2 #box5 p strong{
     font-size: 14px;
 }
+#section2 #box5 #decoration6{
+    bottom: -16px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background-image: url('../img/decoration6.png');
+}
+#section2 #box5 #decoration7{
+    bottom: -27px;
+    right: 80px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/decoration7.png');
+}
 #section2 #motto2{
     color:#32cbc6;
 }
 #section2 #nav2{
     background-color: #32cbc6;
 }
+/****************************/
 #section3 #box6{
     top:10%;
     left: 50%;
@@ -199,6 +251,13 @@ body{
     font-weight: 700;
     line-height: 28px; 
 }
+#section3 #box6 #decoration8{
+    bottom: -27px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/decoration8.png');
+}
 #section3 #box7{
     top:40%;
     left: 50%;
@@ -230,6 +289,13 @@ body{
     font-size: 15px;
     font-weight: 700;
     line-height: 28px; 
+}
+#section3 #box7 #decoration9{
+    bottom: -27px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    background-image: url('../img/decoration9.png');
 }
 #section3 #box8{
     top:70%;
@@ -266,6 +332,7 @@ body{
 #section3 #nav3{
     background-color: #ceda14;
 }
+/****************************/
 #section4 #box9{
     top:5%;
     left: 50%;
@@ -306,6 +373,13 @@ body{
     font-size: 16px;
     font-weight: 700;
     line-height: 28px;     
+}
+#section4 #box9 #decoration10{
+    top: -15px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/decoration10.png');
 }
 #section4 #box10{
     top:35%;
@@ -348,6 +422,13 @@ body{
     font-weight: 700;
     line-height: 28px;     
 }
+#section4 #box10 #decoration11{
+    top: -30px;
+    right: 90px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/decoration11.png');
+}
 #section4 #box11{
     top:65%;
     left: 50%;
@@ -389,11 +470,19 @@ body{
     font-weight: 700;
     line-height: 28px;     
 }
+#section4 #box11 #decoration12{
+    top: -35px;
+    left: 70px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/decoration12.png');
+}
 #section4 #nav4{
     background-color: #fc1c00;
 }
+/****************************/
 #section5{
-    padding: 60px 0;
+    padding: 30px 0;
 }
 #section5 #myCanvasContainer{
     width: 300px;
@@ -410,6 +499,13 @@ body{
     text-align: center;
     margin:5px;
 }
+#section5 #motto5 h4{
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    font-weight: 500;
+    margin:2px;
+}
 #section5 #motto5 p{
     text-align: center;
     font-size: 16px;
@@ -425,4 +521,72 @@ body{
 }
 #section5 #nav5{
     background-color: #c14e98;
+}
+/****************************/
+#section6 #box12{
+    top:5%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;      
+}
+#section6 #box12 h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #777;
+}
+#section6 #box13{
+    top:20%;
+    left: 50%;
+    width: 250px;
+    margin-left: -115px;    
+}
+#section6 #box13 #img12{
+    width: 250px;
+    height: 250px;
+}
+#section6 #box14{
+    top:70%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;    
+}
+#section6 #box14 h3{
+    text-align: center;
+    font-weight: 700;
+    color: #777;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+#section6 #box14 p{
+    font-family: 'Helvetica';
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: #aaa;
+}
+#section6 #box14 p span{
+    margin:0 15px;
+}
+#section6 #box14 .btn{
+    width: 180px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin:20px auto;
+    padding: 6px 8px;
+    color: #fff;
+    background-color: #fc1c00;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#section6 #box14 .btn:active{
+    background-color: #e82108;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5) inset;
+}
+#section0{
+    width: 100%;
+    height: 100%;
+    background-image:url('../img/welcome.jpg');
+    background-size: cover;
 }
