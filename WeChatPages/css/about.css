@@ -1,161 +1,378 @@
-body{
-	padding: 0;
+body {
+    padding: 0;
 }
-.jumbotron{
-	position: relative;
-	height: 240px;
-	margin: 0;
+.jumbotron {
+    position: relative;
+    height: 240px;
+    margin: 0;
 }
-.jumbotron>img{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top:0;
-	left: 0;
+.jumbotron>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
-.jumbotron>.mock-up{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top:0;
-	left: 0;
-	background: rgba(0,0,0,0.6);
+.jumbotron>.mock-up {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
 }
-.jumbotron .container{
-	z-index: 10;
-	position: absolute;
-	width: 100%;
-	left: 0;
+.jumbotron .container {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    left: 0;
 }
-.jumbotron h1{
-	color: #fff;
-	font-size:60px;
+.jumbotron h1 {
+    color: #fff;
+    font-size: 60px;
 }
-.jumbotron p{
-	color:#aaa;
-	font-size: 20px;
+.jumbotron p {
+    color: #aaa;
+    font-size: 16px;
 }
-.section{
-	padding: 40px 20px;
+.section {
+    padding: 40px 20px;
 }
-.section h2.title{
-	font-size: 20px;
-	font-weight: 700;
-	padding: 6px 10px;
-/*	border-left: solid 4px;
-	border-right: solid 4px;*/
+.section h2.title {
+	margin-top: 0px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 6px 10px;
 }
-.section p{
-	text-align: left;
-	font-size: 16px;
-	padding: 0 10px;
+.section h2.sub-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+    margin:30px 0 0 0;
+}
+.section p {
+    text-align: left;
 }
 /*section color*/
-.section.team-intro{
-	background-color: #f8f8f8;
+
+.section.team-intro {
+    background-color: #f8f8f8;
 }
-.section.team-member{
-	background-color: #fff;
+.section.team-member {
+    background-color: #fff;
 }
-.section.join{
-	background-color: #f8f8f8;
+.section.join {
+    background-color: #f8f8f8;
 }
-.section.contact{
-	background-color: #404040;
+.section.contact {
+    background-color: #404040;
 }
 /*title color*/
-.section.team-intro h2.title{
-	color: #f16745;
+
+.section.team-intro h2.title {
+    color: #c03b44;
 }
-.section.team-member h2.title{
-	color: #4cc3d9;
+.section.team-member h2.title {
+    color: #2e79bb;
 }
 /*member*/
-.section.team-member .portrait{
-	background-color: #999;
-	-webkit-transition: all 1s;
-	-o-transition: all 1s;
-	transition: all 1s;
+
+.section.team-member .portrait {
+    background-color: #bbb;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
-.section.team-member .portrait.hover{
-	background-color: #404040;
+.section.team-member .portrait.hover {
+    background-color: #1d5b92;
 }
-.portrait img.avatar{
-	width: 100%;
-	height: auto;
+.portrait img.avatar {
+    width: 100%;
+    height: auto;
 }
-.section.team-member .name{
-	font-size: 16px;
-	font-weight: 700;
+.section.team-member .name {
+    font-size: 16px;
+    font-weight: 700;
 }
-.section.team-member .position{
-	font-size: 14px;
-	color: #999;
+.section.team-member .position {
+    font-size: 14px;
+    color: #999;
 }
 /*join*/
-.section.join .row{
-	padding: 10px 0;
-	border-bottom: dashed 2px #eee;
+.section.join .job-container{
+	max-width: 300px;
+	margin: 0 auto;
 }
-.section.join .row:last-child{
-	border-bottom: none;
+.section.join .row {
+    padding: 10px 0;
+    border-bottom: dashed 2px #eee;
 }
-.section.join h2.title{
-	color: #93648d;
-	margin-bottom: 6px;
+.section.join .row:last-child {
+    border-bottom: none;
 }
-.section.join h5{
+.section.join h2.title {
+    color: #93648d;
+    margin-bottom: 6px;
+}
+.section.join p.intro{
+	padding: 10px 4px;
 	font-size: 14px;
-	color: #777;
-	margin-bottom: 20px;
+	line-height: 25px;
+	color: #666;
 }
-.section.join p{
-	padding: 10px 0;
-	font-size: 12px;
+.section.join h5 {
+    font-size: 14px;
+    color: #777;
+    line-height: 28px;
+    margin:20px 0 10px 0;
 }
-.section.join p strong{
-	font-size: 14px;
+.section.join p {
+    padding: 10px 0;
+    font-size: 12px;
 }
-.section.join p.text-right{
-	text-align: right;
+.section.join p strong {
+    font-size: 14px;
+}
+.section.join p.text-right {
+    text-align: right;
 }
 /*contact*/
-.section.contact{
-	padding: 40px 0;
+
+.section.contact {
+    padding: 40px 0;
 }
-.section.contact .image{
-	margin: 0 auto;
-	width: 80px;
-	height: 80px;
-	background-size: cover;
-	-webkit-transition: all 1s;
-	-o-transition: all 1s;
-	transition: all 1s;
+.section.contact .image {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
-.image.feedback{
-	background-image: url('../img/about/feedback_carved.png');
-	background-color:#7bc8a4;
+.image.feedback {
+    background-image: url('../img/about/feedback_carved.png');
+    background-color: #7bc8a4;
 }
-.image.cooperation{
-	background-image: url('../img/about/cooperation_carved.png');
-	background-color:#7bc8a4;
+.image.cooperation {
+    background-image: url('../img/about/cooperation_carved.png');
+    background-color: #7bc8a4;
 }
-.image.outsource{
-	background-image: url('../img/about/outsource_carved.png');
-	background-color:#7bc8a4;
+.image.outsource {
+    background-image: url('../img/about/outsource_carved.png');
+    background-color: #7bc8a4;
 }
-.image.hover{
-	background-color:#ffc65d !important;
+.image.hover {
+    background-color: #ffc65d !important;
 }
-.section.contact h4{
-	color: #bbb;
-	font-size: 14px;
+.section.contact h4 {
+    color: #bbb;
+    font-size: 14px;
 }
-.section.contact .info{
-	margin-top: 10px;
+.section.contact .info {
+    margin-top: 10px;
 }
-.section.contact p{
-	text-align: center;
-	font-size: 14px;
-	margin-bottom: 4px;
+.section.contact p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 4px;
 }
+/*Timeline Css Start*/
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+.cd-container {
+    /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+    
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.cd-container::after {
+    /* clearfix */
+    
+    content: '';
+    display: table;
+    clear: both;
+}
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+#cd-timeline {
+    position: relative;
+    padding: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#cd-timeline::before {
+    /* this is the vertical line */
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: #d7e4ed;
+}
+@media only screen and (min-width: 1170px) {
+    #cd-timeline {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    #cd-timeline::before {
+        left: 50%;
+        margin-left: -2px;
+    }
+}
+.cd-timeline-block {
+    position: relative;
+    margin: 2em 0;
+}
+.cd-timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.cd-timeline-block:first-child {
+    margin-top: 0;
+}
+.cd-timeline-block:last-child {
+    margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+    .cd-timeline-block {
+        margin: 4em 0;
+    }
+    .cd-timeline-block:first-child {
+        margin-top: 0;
+    }
+    .cd-timeline-block:last-child {
+        margin-bottom: 0;
+    }
+}
+.cd-timeline-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img i {
+    display: block;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+}
+.cd-timeline-img.cd-child, .cd-timeline-img.cd-wechat {
+    background: #75ce66;
+}
+.cd-timeline-img.cd-code, .cd-timeline-img.cd-user {
+    background: #c03b44;
+}
+.cd-timeline-img.cd-trophy, .cd-timeline-img.cd-rocket {
+    background: #f0ca45;
+}
+.cd-timeline-img.cd-graduation {
+    background: #2e79bb;
+}
+@media only screen and (min-width: 1170px) {
+    .cd-timeline-img {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+        /* Force Hardware Acceleration in WebKit */
+        
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+    .cssanimations .cd-timeline-img.is-hidden {
+        visibility: hidden;
+    }
+}
+.cd-timeline-content {
+    position: relative;
+    margin-left: 60px;
+    background: #ffffff;
+    border-radius: 0.25em;
+    padding: 10px;
+    box-shadow: 0 3px 0 #d7e4ed;
+}
+.cd-timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.cd-timeline-content h2 {
+    color: #303e49;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+.cd-timeline-content p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 12px !important;
+}
+.cd-timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid #ffffff;
+}
+@media only screen and (min-width: 768px) {
+    .cd-timeline-content h2 {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
+    .cd-timeline-content p {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 1170px) {
+    .cd-timeline-content {
+        margin-left: 0;
+        padding: 1.6em;
+        width: 45%;
+    }
+    .cd-timeline-content::before {
+        top: 24px;
+        left: 100%;
+        border-color: transparent;
+        border-left-color: #ffffff;
+    }
+    .cd-timeline-block:nth-child(even) .cd-timeline-content {
+        float: right;
+    }
+    .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+        top: 24px;
+        left: auto;
+        right: 100%;
+        border-color: transparent;
+        border-right-color: #ffffff;
+    }
+    .cssanimations .cd-timeline-content.is-hidden {
+        visibility: hidden;
+    }
+}
+/*Timeline Css End*/
