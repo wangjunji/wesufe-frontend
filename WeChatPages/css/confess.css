@@ -29,7 +29,7 @@ body {
 .box::before, .box::after {
     content: '';
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     width: 40%;
     height: 10px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
@@ -104,7 +104,7 @@ body {
 .color-picker li.selected{
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7) inset;
 }
-.confess-wall .box {
+.confess-wall .box{
 	min-height: 180px;
 	margin:0 auto;
 	margin-top: 10px;
@@ -115,4 +115,172 @@ body {
 .confess-wall .content p{
 	text-align: left;
 	font-size: 18px;
+}
+/*confess-single*/
+body.body-confess-single{
+    padding: 0px;
+    background-image: none;
+    background-color: #f2bf87;
+}
+.confess-single .box{
+    margin: 20px 0 10px 0;
+    min-height: 100px;
+    max-height: 150px;
+}
+.confess-single .box .content{
+    padding:0;
+    margin-top: 6px;
+    font-size: 16px;
+    max-height: 76px;
+    overflow-y:auto;
+    text-align: left;
+}
+.confess-single .box .content p{
+    margin-bottom: 0;
+}
+.confess-single .pink{
+    color: #eb60a5;
+}
+.confess-single .bg-pink{
+    background-color: #eb60a5;
+}
+.confess-single .light-blue{
+    color: #6db3e6;
+}
+.confess-single .bg-light-blue{
+    background-color: #6db3e6;
+}
+.confess-single .btn-container{
+    text-align: left;
+}
+.confess-single .btn-container .container{
+    padding: 0;
+    width: 100%;
+}
+.confess-single .btn-container .row{
+    margin-bottom: 10px;
+}
+.confess-single .btn-container .col:first-child{
+    padding-right: 0;
+}
+.confess-single .btn-container strong{
+    font-size: 20px;
+}
+.confess-single .btn-container span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.confess-single .btn-container button{
+    width: 78px;
+    padding: 2px 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+.confess-single .btn-container .heart-bar{
+    position: relative;
+    height: 32px;
+}
+.confess-single .heart-bar .bar{
+    position: absolute;
+    width: 100%;
+    top:50%;
+    margin-top: -5px;
+    background-color: #fad7d7;
+    height: 10px;
+    border-radius: 10px;
+}
+.confess-single .heart-bar .heart{
+    position: absolute;
+    top:-16px;
+    left: -10px;
+    color: #ea2552;
+    font-size: 30px;
+    opacity: .8;
+}
+.confess-single .tab-wrapper{
+    background-color: #f9e4ac;
+    border-radius: 10px;
+    padding: 15px;
+}
+.confess-single .inner-tab{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.confess-single .inner-tab .reply-tab,.confess-single .inner-tab .publish-tab{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.confess-single .reply-tab{
+    overflow-y: auto;
+    background-color: #f9e4ac;
+    z-index: 1;
+}
+.confess-single .reply-tab ul{
+    list-style: none;
+}
+.confess-single .reply-tab ul>li{
+    position: relative;
+    padding:6px 8px 10px 8px;
+    background-color: #b498d5;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+.confess-single .reply-tab ul>li:before{
+    content:'';
+    width:0;
+    height:0;
+    position:absolute;
+    bottom:-10px;
+    border-top:20px solid #b498d5;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+}
+.confess-single .reply-tab ul>li.angle-left:before{
+     left:20px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);      
+}
+.confess-single .reply-tab ul>li.angle-right:before{
+    right:20px;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);      
+} 
+.confess-single .reply-tab ul>li>p{
+    margin:0;
+    word-wrap:break-word;
+    text-align: left;
+    line-height: 18px;
+}
+.confess-single .inner-tab .publish-tab{
+    background-color: #f9e4ac;
+}
+.confess-single .inner-tab .publish-tab textarea{
+    resize:none;
+    border:none;
+    box-shadow: none;
+    background-color: #f5f8ce;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #666;
+    height: 80%;
+}
+.confess-single .inner-tab .publish-tab textarea:focus{
+    outline: none;
+}
+.confess-single .inner-tab .publish-tab button{
+    margin-top: 10px;
+    color: #fff;
+    background-color: #b498d5;
 }
