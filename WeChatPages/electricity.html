@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>上财微助手</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your Keywords">
+    <meta name="author" content="Author Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/electricity.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#"><i class="fa fa-bolt"></i> 电费查询</a>
+    </div>
+    <div class="inner-page electricity">
+        <div class="header-icon">
+            <i class="fa fa-building"></i> 
+        </div>
+        <h4>请先绑定寝室</h4>
+        <div class="outer-wrapper">
+            <div class="menu-panel">
+                <ul class="menu">
+                    <li><a href="#" data-node="1" data-leaf="0">国定路校区<i class="fa fa-chevron-right choice"></i></a></li>
+                    <li><a href="#" data-node="2" data-leaf="0">武川路校区<i class="fa fa-chevron-right choice"></i></a></li>
+                    <li><a href="#" data-node="3" data-leaf="0">武东路校区<i class="fa fa-chevron-right choice"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer fixed-bottom">
+        2014 &copy; WeSufe
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var json=[{"id":"4","text":"南3公寓","parent":"1","leaf":"False"},
+                  {"id":"5","text":"603","parent":"1","leaf":"True"}]
+        $('.menu>li>a').bind('click',MenuItemClickHandler)
+        function MenuItemClickHandler(e){
+            e.preventDefault();
+            var $this=$(e.target);
+            var $li=$this.parent();
+            var $menu=$(this).parents('.menu-panel');
+            var nodeId=$(this).data('node');
+            //ajax GET
+            var newMenu=""
+            $.each(json,function(i,n){
+                if(n.leaf=="False"){
+                    newMenu+='<li><a href="#" data-node="'+n.id+'" data-leaf="0">'+n.text+'<i class="choice fa fa-chevron-right"></i></a></li>';
+                }else{
+                    newMenu+='<li><a href="#" data-node="'+n.id+'" data-leaf="1"><i class="fa fa-building"></i> '+n.text+'<span class="bind-btn">绑定</span></a></li>';
+                }
+            })
+            $li.addClass('active');
+            $li.siblings().removeClass('active');
+            $li.siblings().find('i').removeClass('fa-check').addClass('fa-chevron-right');
+            $this.find('i').removeClass('fa-chevron-right').addClass('fa-check');
+            var menuWidth=$('.menu-panel').outerWidth();
+            var menuCount=$('.menu-panel').size();
+            // 添加menu-panel并增加右偏移
+            $('.outer-wrapper').append('<div class="menu-panel"><ul class="menu">'+newMenu+'</ul></div>');
+            $menu.next().css('right','-'+menuWidth+'px');
+            $menu.next().find('ul>li>a:not([data-leaf="1"])').bind('click',MenuItemClickHandler);
+            //所有menu左移
+            setTimeout(function(){
+            $('.menu-panel').each(function(){
+                var currentOffset=parseInt($(this).css('right'));
+                var newOffset=currentOffset+menuWidth+"px";
+                $(this).animate({'right':newOffset},800);
+            })
+            },1000)
+        }
+    </script>
+</body>
+
+</html>

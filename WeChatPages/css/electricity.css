@@ -1,0 +1,63 @@
+.footer.fixed-bottom{
+	position: fixed;
+	bottom: 0;
+}
+.outer-wrapper{
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+.electricity .header-icon {
+	padding:10px 0;
+}
+.electricity .header-icon i{
+	font-size: 40px;
+}
+.electricity .menu-panel{
+	position: absolute;
+	top:0;
+	right: 0;
+	width: 100%;
+	padding: 10px 20px;
+}
+.electricity ul.menu{
+	list-style:none;
+	text-align: left;
+	background-color: #f9f9f9;
+	border: solid 1px #ccc;
+	border-radius: 6px;
+}
+.electricity ul.menu>li{
+	padding: 8px;
+	border-bottom: solid 1px #ccc;
+}
+.electricity ul.menu>li:first-child{
+	border-top: none;
+}
+.electricity ul.menu>li:last-child{
+	border-bottom: none;
+}
+.electricity ul.menu>li>a{
+	text-decoration: none;
+	display: block;
+	color: #666;
+}
+.electricity ul.menu>li>a>i.choice{
+	float: right;
+	line-height: 21px;
+	color: #1abc9c;
+}
+.electricity ul.menu>li.active{
+	background-color:#1abc9c;
+}
+.electricity ul.menu>li.active>a,.electricity ul.menu>li.active>a>i{
+	color: #fff;
+}
+.electricity ul.menu>li>a>span.bind-btn{
+	float: right;
+	line-height: 17px;
+	padding: 2px 10px;
+	border-radius: 6px;
+	background-color: #1abc9c;
+	color: #fff;
+}
