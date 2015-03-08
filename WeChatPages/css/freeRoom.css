@@ -1,0 +1,54 @@
+.footer.fixed-bottom {
+  margin: 0px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.freeRoom{
+	padding: 20px;
+}
+.icon{
+	text-align: center;
+	font-size: 40px;
+}
+.divider{
+	margin: 15px 0;
+	border-bottom: solid 1px #eee;
+}
+.filter .row{
+	padding: 15px 0;
+}
+.filter .col-xs-2{
+	padding-right: 0;
+}
+.form-control-feedback{
+	top: 12px;
+	right: 12px;
+}
+.btn-primary{
+	width: 100%;
+}
+.list{
+	padding: 30px 0;
+	font-size: 14px;
+}
+.none{
+	text-align: center;
+}
+.condition div span{
+	padding: 5px 10px;
+	background-color: #6879a3;
+	color: #ffffff;
+	border-radius: 5px;
+}
+.condition div{
+	padding-bottom: 10px;
+}
+.condition>span{
+	color: #888;
+	font-size: 12px;
+}
+.freeRoom label{
+	padding-top: 7px;
+}
