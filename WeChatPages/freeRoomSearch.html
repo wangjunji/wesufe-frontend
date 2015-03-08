@@ -23,36 +23,36 @@
 </head>
 <body>
     <div class="navbar navbar-default navbar-fixed-top">
-        <a class="navbar-brand" href="#"><i class="fa fa-building"></i> 空闲教室查询</a>
+        <a class="navbar-brand" href="#"><i class="fa fa-search"></i> 空闲教室查询</a>
     </div>
     <div class="inner-page freeRoom">
         <div class="row">
             <div class="col-xs-12 icon">
-                <i class="fa fa-university"></i>
+                <i class="fa fa-building orange"></i>
             </div>  
         </div>
         <div class="divider"></div>
         <form class="filter" action="" method="post">
             <div class="row">
-                <div class="col-xs-2">
+                <div class="col-xs-3">
                     <label for="">教学楼</label>
                 </div>
-                <div class="col-xs-10">
+                <div class="col-xs-9">
                     <select class="form-control" name="" id="">
                         <option>第一教学楼</option>
                         <option>第二教学楼</option>
                         <option>第三教学楼</option>
                         <option>第四教学楼</option>
-                        <option>国定校区梯教</option>
+                        <option>国定梯教</option>
                         <option>武川梯教</option>
                     </select>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-2">
+                <div class="col-xs-3">
                     <label for="">日期</label>
                 </div>
-                <div class="col-xs-10">
+                <div class="col-xs-9">
                     <div id="datetimepicker">
                         <input type="text" class="form-control input-md">
                         <span class="form-control-feedback fa fa-calendar"></span>
@@ -60,10 +60,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-2">
+                <div class="col-xs-3">
                     <label for="">时间段</label>
                 </div>
-                <div class="col-xs-10">
+                <div class="col-xs-9">
                     <select class="form-control" name="" id="">
                         <option>8:00-10:00</option>
                         <option>10:00-12:00</option>
@@ -75,11 +75,7 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <a class="btn btn-primary" href="freeRoomResult.html"><i class="fa fa-search"></i> 查询</a>
-                </div>
-            </div>  
+            <a class="btn btn-block btn-danger" href="freeRoomResult.html"><i class="fa fa-search"></i> 查询</a>
         </form> 
     </div>
     <div class="footer fixed-bottom">
@@ -103,8 +99,7 @@
             pickTime: false
         });
         dt.data("DateTimePicker").setMinDate(new Date());
-        dt.data("DateTimePicker").setMaxDate(new Date(new moment().add(7,'days').format('L')));
-    })
+    });
     </script>
 </body>
 </html>

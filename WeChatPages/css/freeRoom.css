@@ -1,9 +1,12 @@
 .footer.fixed-bottom {
-  margin: 0px;
+  margin: 0;
   position: fixed;
   left: 0;
   bottom: 0;
   z-index: 2;
+}
+body{
+	padding-bottom: 40px;
 }
 .freeRoom{
 	padding: 20px;
@@ -19,15 +22,15 @@
 .filter .row{
 	padding: 15px 0;
 }
-.filter .col-xs-2{
+.filter .col-xs-3{
 	padding-right: 0;
 }
 .form-control-feedback{
 	top: 12px;
 	right: 12px;
 }
-.btn-primary{
-	width: 100%;
+.btn-block{
+	margin-top: 10px;
 }
 .list{
 	padding: 30px 0;
@@ -36,19 +39,34 @@
 .none{
 	text-align: center;
 }
-.condition div span{
-	padding: 5px 10px;
-	background-color: #6879a3;
-	color: #ffffff;
-	border-radius: 5px;
+.condition{
+	padding:0 10px 10px 10px;
 }
-.condition div{
-	padding-bottom: 10px;
+.condition .building{
+	font-size: 18px;
+	color: #666;
+	font-weight: 600;
 }
-.condition>span{
-	color: #888;
-	font-size: 12px;
+.condition .time{
+	margin-top: 8px;
+}
+.condition .time span{
+	margin: 0 10px;
+}
+.result-table th{
+	text-align: center;
+	color:#777;
+}
+.result-table>tbody>tr>td{
+	padding: 4px;
+}
+.result-table .fa-check{
+	color:#5cb85c;
+}
+.result-table .fa-times{
+	color:#d9534f;
 }
 .freeRoom label{
 	padding-top: 7px;
+	text-align: right;
 }
